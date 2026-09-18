@@ -1,2006 +1,386 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Jasmine Spa | Massage in Poquoson, VA</title>
-
-  <meta
-    name="description"
-    content="Jasmine Spa in Poquoson, Virginia. Foot Massage, Therapeutic Massage, Swedish Massage, Deep Tissue Massage, Hot Stone Massage and Couples Massage. Call or text 757-525-8188."
-  >
-
-  <meta
-    name="keywords"
-    content="Jasmine Spa, massage Poquoson VA, massage near me, foot massage, therapeutic massage, Swedish massage, deep tissue massage, hot stone massage, couples massage"
-  >
-
-  <meta name="theme-color" content="#f6f1eb">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
-    rel="stylesheet"
-  >
-
-  <style>
-    :root {
-      --cream: #f7f3ed;
-      --cream-2: #eee7df;
-      --white: #ffffff;
-      --dark: #24211f;
-      --muted: #746e68;
-      --brown: #8c7665;
-      --brown-dark: #665346;
-      --accent: #a88d78;
-      --line: rgba(52, 45, 40, 0.16);
-      --shadow: 0 16px 50px rgba(37, 31, 27, 0.12);
-      --serif: "Cormorant Garamond", Georgia, serif;
-      --sans: "Montserrat", Arial, sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      font-family: var(--sans);
-      color: var(--dark);
-      background: var(--cream);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .container {
-      width: min(1180px, calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-    /* =========================
-       TOP BAR
-    ========================= */
-
-    .topbar {
-      background: var(--dark);
-      color: rgba(255,255,255,0.88);
-      font-size: 11px;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-    }
-
-    .topbar-inner {
-      min-height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      gap: 20px;
-    }
-
-    .topbar a:hover {
-      color: #fff;
-    }
-
-    /* =========================
-       NAVIGATION
-    ========================= */
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(247, 243, 237, 0.96);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav-wrap {
-      min-height: 86px;
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .nav-left,
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .nav-right {
-      justify-content: flex-end;
-    }
-
-    .nav-link {
-      position: relative;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.19em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      width: 0;
-      height: 1px;
-      background: var(--dark);
-      transition: width 0.25s ease;
-    }
-
-    .nav-link:hover::after {
-      width: 100%;
-    }
-
-    .brand {
-      min-width: 220px;
-      text-align: center;
-      line-height: 1;
-    }
-
-    .brand-name {
-      font-family: var(--serif);
-      font-size: 31px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .brand-sub {
-      margin-top: 8px;
-      font-size: 8px;
-      color: var(--muted);
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-    }
-
-    .booking-nav {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 42px;
-      padding: 0 19px;
-      color: #fff;
-      background: var(--dark);
-      border: 1px solid var(--dark);
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      transition: 0.25s ease;
-    }
-
-    .booking-nav:hover {
-      background: transparent;
-      color: var(--dark);
-    }
-
-    .mobile-menu-button {
-      display: none;
-      width: 44px;
-      height: 44px;
-      border: 0;
-      background: transparent;
-      cursor: pointer;
-    }
-
-    .mobile-menu-button span {
-      display: block;
-      width: 25px;
-      height: 1px;
-      margin: 6px auto;
-      background: var(--dark);
-      transition: 0.25s ease;
-    }
-
-    .mobile-menu {
-      display: none;
-      padding: 14px 24px 26px;
-      border-top: 1px solid var(--line);
-      background: var(--cream);
-    }
-
-    .mobile-menu.open {
-      display: block;
-    }
-
-    .mobile-menu a {
-      display: block;
-      padding: 13px 0;
-      border-bottom: 1px solid var(--line);
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      position: relative;
-      min-height: 760px;
-      display: flex;
-      align-items: center;
-      isolation: isolate;
-      overflow: hidden;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(26, 22, 19, 0.67) 0%,
-          rgba(26, 22, 19, 0.46) 40%,
-          rgba(26, 22, 19, 0.12) 72%,
-          rgba(26, 22, 19, 0.06) 100%
-        ),
-        url("https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=2200&q=85")
-        center 46% / cover no-repeat;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background: linear-gradient(
-        180deg,
-        rgba(0,0,0,0.03),
-        rgba(0,0,0,0.12)
-      );
-    }
-
-    .hero-content {
-      width: min(660px, 90%);
-      color: #fff;
-      padding: 80px 0;
-    }
-
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 24px;
-      font-size: 10px;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-    }
-
-    .hero-eyebrow::before {
-      content: "";
-      width: 45px;
-      height: 1px;
-      background: rgba(255,255,255,0.72);
-    }
-
-    .hero h1 {
-      max-width: 620px;
-      font-family: var(--serif);
-      font-size: clamp(58px, 7vw, 99px);
-      font-weight: 400;
-      line-height: 0.93;
-      letter-spacing: -0.025em;
-    }
-
-    .hero-subtitle {
-      margin-top: 23px;
-      font-family: var(--serif);
-      font-size: clamp(24px, 2vw, 31px);
-      font-weight: 400;
-      font-style: italic;
-    }
-
-    .hero-description {
-      max-width: 570px;
-      margin-top: 25px;
-      color: rgba(255,255,255,0.88);
-      font-size: 13px;
-      line-height: 1.9;
-      letter-spacing: 0.02em;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-      margin-top: 37px;
-    }
-
-    .btn {
-      min-height: 52px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 28px;
-      border: 1px solid transparent;
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.19em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn-light {
-      background: #fff;
-      color: var(--dark);
-      border-color: #fff;
-    }
-
-    .btn-light:hover {
-      background: transparent;
-      color: #fff;
-    }
-
-    .btn-outline-light {
-      color: #fff;
-      border-color: rgba(255,255,255,0.75);
-      background: rgba(255,255,255,0.02);
-    }
-
-    .btn-outline-light:hover {
-      color: var(--dark);
-      background: #fff;
-      border-color: #fff;
-    }
-
-    /* =========================
-       INTRO
-    ========================= */
-
-    .intro {
-      padding: 122px 0;
-      background: var(--cream);
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 0.86fr 1.14fr;
-      gap: 90px;
-      align-items: center;
-    }
-
-    .intro-image-wrap {
-      position: relative;
-      padding: 0 0 48px 46px;
-    }
-
-    .intro-image-wrap::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 74%;
-      height: 76%;
-      border: 1px solid rgba(91, 74, 62, 0.25);
-    }
-
-    .intro-image {
-      position: relative;
-      z-index: 1;
-      min-height: 570px;
-      object-fit: cover;
-      box-shadow: var(--shadow);
-    }
-
-    .section-kicker {
-      margin-bottom: 18px;
-      color: var(--brown-dark);
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.26em;
-      text-transform: uppercase;
-    }
-
-    .section-title {
-      font-family: var(--serif);
-      font-size: clamp(44px, 5vw, 70px);
-      font-weight: 400;
-      line-height: 1;
-      letter-spacing: -0.02em;
-    }
-
-    .intro-copy h3 {
-      margin: 29px 0 18px;
-      font-family: var(--serif);
-      font-size: 29px;
-      font-weight: 500;
-    }
-
-    .intro-copy p {
-      max-width: 590px;
-      margin-bottom: 18px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 2;
-    }
-
-    .intro-details {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px 30px;
-      margin-top: 35px;
-      padding-top: 30px;
-      border-top: 1px solid var(--line);
-    }
-
-    .detail-label {
-      display: block;
-      margin-bottom: 7px;
-      color: var(--brown);
-      font-size: 9px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-    }
-
-    .detail-value {
-      font-family: var(--serif);
-      font-size: 18px;
-      line-height: 1.45;
-    }
-
-    /* =========================
-       PHILOSOPHY
-    ========================= */
-
-    .philosophy {
-      position: relative;
-      min-height: 500px;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      background:
-        linear-gradient(rgba(30,25,22,0.53), rgba(30,25,22,0.53)),
-        url("https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=2200&q=85")
-        center / cover no-repeat;
-      background-attachment: fixed;
-    }
-
-    .philosophy-inner {
-      width: min(800px, calc(100% - 48px));
-      padding: 80px 0;
-      text-align: center;
-      color: #fff;
-    }
-
-    .philosophy .section-kicker {
-      color: rgba(255,255,255,0.72);
-    }
-
-    .philosophy-title {
-      font-family: var(--serif);
-      font-size: clamp(47px, 6vw, 78px);
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .philosophy p {
-      max-width: 680px;
-      margin: 25px auto 0;
-      color: rgba(255,255,255,0.82);
-      font-size: 13px;
-      line-height: 2;
-    }
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services {
-      padding: 120px 0 128px;
-      background: #fff;
-    }
-
-    .services-head {
-      max-width: 760px;
-      margin: 0 auto 70px;
-      text-align: center;
-    }
-
-    .services-head p {
-      max-width: 630px;
-      margin: 20px auto 0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.9;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 26px;
-      align-items: stretch;
-    }
-
-    .service-card {
-      display: flex;
-      flex-direction: column;
-      background: var(--cream);
-      border: 1px solid rgba(80, 66, 56, 0.14);
-      transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 55px rgba(55,46,40,0.11);
-    }
-
-    .service-image {
-      height: 270px;
-      object-fit: cover;
-    }
-
-    .service-content {
-      flex: 1;
-      padding: 35px 31px 34px;
-    }
-
-    .service-number {
-      margin-bottom: 10px;
-      color: var(--brown);
-      font-size: 9px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-    }
-
-    .service-card h3 {
-      font-family: var(--serif);
-      font-size: 34px;
-      font-weight: 500;
-      line-height: 1.1;
-    }
-
-    .service-style {
-      min-height: 44px;
-      margin-top: 10px;
-      color: var(--brown-dark);
-      font-size: 9px;
-      font-weight: 500;
-      line-height: 1.7;
-      letter-spacing: 0.11em;
-      text-transform: uppercase;
-    }
-
-    .price-table {
-      width: 100%;
-      margin-top: 25px;
-      border-collapse: collapse;
-    }
-
-    .price-table th {
-      padding: 10px 5px;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 8px;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-align: right;
-      text-transform: uppercase;
-    }
-
-    .price-table th:first-child {
-      text-align: left;
-    }
-
-    .price-table td {
-      padding: 13px 5px;
-      border-bottom: 1px solid var(--line);
-      font-family: var(--serif);
-      font-size: 17px;
-      text-align: right;
-    }
-
-    .price-table td:first-child {
-      text-align: left;
-    }
-
-    .service-book {
-      margin-top: 29px;
-      width: 100%;
-      min-height: 46px;
-      border: 1px solid var(--dark);
-      background: transparent;
-      color: var(--dark);
-    }
-
-    .service-book:hover {
-      background: var(--dark);
-      color: #fff;
-    }
-
-    .pricing-note {
-      margin-top: 31px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 10px;
-      line-height: 1.8;
-    }
-
-    /* =========================
-       APPOINTMENT CTA
-    ========================= */
-
-    .appointment {
-      background: var(--cream-2);
-      padding: 95px 0;
-    }
-
-    .appointment-grid {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 50px;
-    }
-
-    .appointment h2 {
-      max-width: 670px;
-      font-family: var(--serif);
-      font-size: clamp(43px, 5vw, 65px);
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .appointment p {
-      max-width: 640px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .appointment-buttons {
-      display: flex;
-      gap: 12px;
-    }
-
-    .btn-dark {
-      color: #fff;
-      background: var(--dark);
-      border-color: var(--dark);
-    }
-
-    .btn-dark:hover {
-      color: var(--dark);
-      background: transparent;
-    }
-
-    .btn-outline-dark {
-      color: var(--dark);
-      background: transparent;
-      border-color: var(--dark);
-    }
-
-    .btn-outline-dark:hover {
-      color: #fff;
-      background: var(--dark);
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact {
-      padding: 120px 0 0;
-      background: #fff;
-    }
-
-    .contact-header {
-      margin-bottom: 60px;
-      text-align: center;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.92fr 1.08fr;
-      min-height: 540px;
-    }
-
-    .contact-panel {
-      padding: 68px clamp(35px, 5vw, 75px);
-      color: #fff;
-      background: var(--dark);
-    }
-
-    .contact-panel .section-kicker {
-      color: rgba(255,255,255,0.58);
-    }
-
-    .contact-panel h3 {
-      max-width: 450px;
-      font-family: var(--serif);
-      font-size: 44px;
-      font-weight: 400;
-      line-height: 1.05;
-    }
-
-    .contact-items {
-      margin-top: 42px;
-    }
-
-    .contact-item {
-      padding: 19px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.14);
-    }
-
-    .contact-label {
-      display: block;
-      margin-bottom: 7px;
-      color: rgba(255,255,255,0.55);
-      font-size: 8px;
-      letter-spacing: 0.23em;
-      text-transform: uppercase;
-    }
-
-    .contact-value {
-      font-family: var(--serif);
-      font-size: 20px;
-      line-height: 1.45;
-    }
-
-    .contact-value a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 11px;
-      margin-top: 36px;
-    }
-
-    .map-wrap {
-      min-height: 540px;
-      background: #ddd;
-    }
-
-    .map-wrap iframe {
-      width: 100%;
-      height: 100%;
-      min-height: 540px;
-      border: 0;
-      filter: saturate(0.75);
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      padding: 38px 0;
-      color: rgba(255,255,255,0.66);
-      background: #181614;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 30px;
-      align-items: center;
-    }
-
-    .footer-brand {
-      font-family: var(--serif);
-      font-size: 23px;
-      color: #fff;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-    }
-
-    .footer-copy {
-      font-size: 9px;
-      letter-spacing: 0.12em;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    .footer-phone {
-      justify-self: end;
-      color: #fff;
-      font-size: 10px;
-      letter-spacing: 0.15em;
-    }
-
-    /* =========================
-       FLOATING MOBILE ACTIONS
-    ========================= */
-
-    .mobile-actions {
-      display: none;
-    }
-
-    /* =========================
-       REVEAL
-    ========================= */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 1020px) {
-      .nav-left,
-      .nav-right {
-        display: none;
-      }
-
-      .nav-wrap {
-        grid-template-columns: 44px 1fr 44px;
-      }
-
-      .mobile-menu-button {
-        display: block;
-      }
-
-      .brand {
-        min-width: 0;
-      }
-
-      .brand-name {
-        font-size: 27px;
-      }
-
-      .hero {
-        min-height: 680px;
-      }
-
-      .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 65px;
-      }
-
-      .intro-image-wrap {
-        max-width: 700px;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .service-card:last-child {
-        grid-column: 1 / -1;
-        width: calc(50% - 13px);
-        justify-self: center;
-      }
-
-      .appointment-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .appointment-buttons {
-        justify-content: flex-start;
-      }
-    }
-
-    @media (max-width: 760px) {
-      html {
-        scroll-padding-top: 74px;
-      }
-
-      body {
-        padding-bottom: 64px;
-      }
-
-      .container {
-        width: min(100% - 30px, 1180px);
-      }
-
-      .topbar {
-        display: none;
-      }
-
-      .nav-wrap {
-        min-height: 72px;
-      }
-
-      .brand-name {
-        font-size: 23px;
-      }
-
-      .brand-sub {
-        display: none;
-      }
-
-      .hero {
-        min-height: calc(100vh - 72px);
-        background-position: 62% center;
-      }
-
-      .hero-content {
-        padding: 90px 0;
-      }
-
-      .hero h1 {
-        font-size: clamp(54px, 17vw, 82px);
-      }
-
-      .hero-description {
-        font-size: 12px;
-      }
-
-      .hero-actions {
-        align-items: stretch;
-        flex-direction: column;
-        max-width: 330px;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .intro,
-      .services {
-        padding: 88px 0;
-      }
-
-      .intro-grid {
-        gap: 45px;
-      }
-
-      .intro-image-wrap {
-        padding: 0 0 24px 24px;
-      }
-
-      .intro-image {
-        min-height: 420px;
-      }
-
-      .intro-details {
-        grid-template-columns: 1fr;
-      }
-
-      .philosophy {
-        min-height: 440px;
-        background-attachment: scroll;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card:last-child {
-        grid-column: auto;
-        width: 100%;
-      }
-
-      .service-image {
-        height: 235px;
-      }
-
-      .appointment {
-        padding: 75px 0;
-      }
-
-      .appointment-buttons {
-        flex-direction: column;
-      }
-
-      .contact {
-        padding-top: 88px;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-panel {
-        padding: 55px 27px;
-      }
-
-      .map-wrap,
-      .map-wrap iframe {
-        min-height: 410px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        text-align: center;
-      }
-
-      .footer-phone {
-        justify-self: center;
-      }
-
-      .mobile-actions {
-        position: fixed;
-        z-index: 1500;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        height: 64px;
-        background: #fff;
-        box-shadow: 0 -5px 20px rgba(0,0,0,0.12);
-      }
-
-      .mobile-actions a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 10px;
-        font-weight: 600;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-      }
-
-      .mobile-actions .mobile-call {
-        color: var(--dark);
-        background: #fff;
-      }
-
-      .mobile-actions .mobile-text {
-        color: #fff;
-        background: var(--dark);
-      }
-    }
-
-    @media (max-width: 430px) {
-      .brand-name {
-        font-size: 20px;
-      }
-
-      .hero h1 {
-        font-size: 55px;
-      }
-
-      .hero-subtitle {
-        font-size: 25px;
-      }
-
-      .section-title {
-        font-size: 47px;
-      }
-
-      .contact-panel h3 {
-        font-size: 39px;
-      }
-    }
-  </style>
+<html class="wide wow-animation desktop landscape rd-navbar-static-linked" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Ocean Massage Spa | Massage Services in London, Ontario</title>
+<meta name="keywords" content="Ocean Massage Spa, relaxation massage, four hands massage, massage London Ontario, 607 Princess Ave">
+<meta name="description" content="Ocean Massage Spa offers relaxation massage and four-hands massage at 607 Princess Ave in London, Ontario.">
+<meta name="author" content="Ocean Massage Spa">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" type="text/css" href="./Aquadora Wellness Center _ Professional Massage Spa in Windsor Ontario_files/css">
+<link rel="stylesheet" href="./Aquadora Wellness Center _ Professional Massage Spa in Windsor Ontario_files/bootstrap.css">
+<link rel="stylesheet" href="./Aquadora Wellness Center _ Professional Massage Spa in Windsor Ontario_files/fonts.css">
+<link rel="stylesheet" href="./Aquadora Wellness Center _ Professional Massage Spa in Windsor Ontario_files/style.css">
+<link rel="stylesheet" href="./omc-overrides.css">
+<style>
+.ie-panel {
+	display: none;
+	background: #212121;
+	padding: 10px 0;
+	box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+	clear: both;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+	display: block;
+}
+</style>
 </head>
-
 <body>
-
-  <!-- ==========================================
-       TOP BAR
-  =========================================== -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span>
-        458 C Wythe Creek Road, Poquoson, VA 23662
-      </span>
-
-      <span>•</span>
-
-      <a href="tel:+17575258188">
-        757-525-8188
-      </a>
-
-      <span>•</span>
-
-      <span>
-        Open Daily 8:00 AM – 10:00 PM
-      </span>
-    </div>
-  </div>
-
-
-  <!-- ==========================================
-       NAVIGATION
-  =========================================== -->
-  <header class="site-header">
-    <div class="container nav-wrap">
-
-      <nav class="nav-left" aria-label="Primary navigation">
-        <a class="nav-link" href="#home">Home</a>
-        <a class="nav-link" href="#about">About Us</a>
+<div class="page"> 
+  <!-- Page Header-->
+  <header class="section page-header" id="home"> 
+    <!-- RD Navbar-->
+    <div class="rd-navbar-wrap" style="height: 108.812px;">
+      <nav class="rd-navbar rd-navbar-modern rd-navbar-original rd-navbar-static" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+        <div class="rd-navbar-main-outer">
+          <div class="rd-navbar-main"> 
+            <!-- RD Navbar Panel-->
+            <div class="rd-navbar-panel"> 
+              <!-- RD Navbar Toggle-->
+              <button class="rd-navbar-toggle toggle-original" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+              <!-- RD Navbar Brand-->
+              <div class="rd-navbar-brand"><a class="brand" href="#home"><img class="brand-logo-dark omc-logo" src="./logo-option-1.png" alt="Ocean Massage Spa logo" width="58" height="58"><img class="brand-logo-light omc-logo" src="./logo-option-1.png" alt="Ocean Massage Spa logo" width="58" height="58"></a> </div>
+            </div>
+            <div class="rd-navbar-main-element">
+              <div class="rd-navbar-nav-wrap toggle-original-elements">
+                <ul class="rd-navbar-nav">
+                <li class="rd-nav-item"><a class="rd-nav-link" href="#home">Home</a> </li>
+                
+                <li class="rd-nav-item "><a class="rd-nav-link" href="#about">ABOUT</a>
+                  
+                </li>
+                
+                <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu"><a class="rd-nav-link" href="#services">MASSAGE</a><span class="rd-navbar-submenu-toggle"></span>
+                  
+                  <ul class="rd-menu rd-navbar-dropdown">
+                    
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#price">Relaxation Massage</a> </li>
+                    
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#price">Four Hands Massage</a> </li>
+                    
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#price">Massage Services</a> </li>
+                    
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#price">Signature Experience</a> </li>
+                    
+                  </ul>
+                  
+                </li>
+                
+                <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu"><a class="rd-nav-link" href="#price">THERAPIES</a><span class="rd-navbar-submenu-toggle"></span>
+                  
+                  <ul class="rd-menu rd-navbar-dropdown">
+                    
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#price">Relaxation Massage</a> </li>
+                    
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#price">Four Hands Massage</a> </li>
+                    
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#price">Massage Services</a> </li>
+                    
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#price">30–90 Minute Options</a> </li>
+                    
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#price">Professional Care</a> </li>
+                    
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#price">Quiet Relaxation</a> </li>
+                    
+                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#price">London Massage Spa</a> </li>
+                    
+                  </ul>
+                  
+                </li>
+                
+                <li class="rd-nav-item "><a class="rd-nav-link" href="#price">PRICE</a>
+                  
+                </li>
+                
+              </ul>
+                <ul class="list-contact">
+                  <li><span class="icon mdi mdi-phone"></span></li>
+                  <li><a class="link" href="tel:+1 416-475-6899">+1 416-475-6899</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
-
-      <button
-        class="mobile-menu-button"
-        id="mobileMenuButton"
-        type="button"
-        aria-label="Open navigation"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <a class="brand" href="#home" aria-label="Jasmine Spa home">
-        <div class="brand-name">Jasmine Spa</div>
-        <div class="brand-sub">Poquoson · Virginia</div>
-      </a>
-
-      <nav class="nav-right" aria-label="Secondary navigation">
-        <a class="nav-link" href="#services">Services</a>
-        <a class="nav-link" href="#contact">Contact</a>
-
-        <a
-          class="booking-nav sms-link"
-          href="#"
-          data-message="Hi Jasmine Spa, I would like to book a massage appointment."
-        >
-          Text Booking
-        </a>
-      </nav>
-
-      <div aria-hidden="true"></div>
     </div>
-
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-
-      <a
-        href="#"
-        class="sms-link"
-        data-message="Hi Jasmine Spa, I would like to book a massage appointment."
-      >
-        Text Booking
-      </a>
-    </nav>
   </header>
-
-
-  <main>
-
-    <!-- ==========================================
-         HERO
-    =========================================== -->
-    <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-content">
-
-          <div class="hero-eyebrow">
-            Jasmine Spa · Poquoson VA
-          </div>
-
-          <h1>
-            Relax.<br>
-            Restore.<br>
-            Renew.
-          </h1>
-
-          <div class="hero-subtitle">
-            Massage designed around you
-          </div>
-
-          <p class="hero-description">
-            Step away from the noise of the day and enjoy a comfortable,
-            peaceful massage experience at Jasmine Spa. Our goal is simple:
-            help you relax, release tension and leave feeling refreshed.
-          </p>
-
-          <div class="hero-actions">
-
-            <a
-              href="#"
-              class="btn btn-light sms-link"
-              data-message="Hi Jasmine Spa, I would like to book a massage appointment. My preferred date and time is: "
-            >
-              Text To Book
-            </a>
-
-            <a
-              href="tel:+17575258188"
-              class="btn btn-outline-light"
-            >
-              Call: 757-525-8188
-            </a>
-
+  <!-- Swiper-->
+  <section class="section swiper-container swiper-slider swiper-slider-1 swiper-container-initialized swiper-container-horizontal" data-swiper="{&quot;autoplay&quot;:{&quot;delay&quot;:4567}}">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide context-dark" data-slide-bg="./service-relaxation-people-v2.png">
+        <div class="swiper-slide-caption section-lg version-2"><div class="container"><div class="row justify-content-md-center"><div class="col-md-10 text-center">
+          <div data-caption-animate="fadeInLeft" data-caption-delay="350"><h1>Ocean Massage Spa</h1></div>
+          <h5 class="font-base"><span data-caption-animate="fadeInLeft" data-caption-delay="550">Relaxation Massage • Four Hands Massage</span></h5>
+          <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="450"><a class="button button-lg button-primary button-zakaria" href="#services">More</a></div>
+        </div></div></div></div>
+      </div>
+      <div class="swiper-slide context-dark" data-slide-bg="./service-relaxation-people-v2.png">
+        <div class="swiper-slide-caption section-lg version-2"><div class="container"><div class="row justify-content-md-center"><div class="col-md-10 text-center">
+          <div data-caption-animate="fadeInLeft" data-caption-delay="350"><h1>Relaxation Massage</h1></div>
+          <h5 class="font-base"><span data-caption-animate="fadeInLeft" data-caption-delay="550">30–90 minutes • Starting at $50</span></h5>
+          <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="450"><a class="button button-lg button-primary button-zakaria" href="#price">More</a></div>
+        </div></div></div></div>
+      </div>
+      <div class="swiper-slide context-dark" data-slide-bg="./service-four-hands-people-v2.png">
+        <div class="swiper-slide-caption section-lg version-2"><div class="container"><div class="row justify-content-md-center"><div class="col-md-10 text-center">
+          <div data-caption-animate="fadeInLeft" data-caption-delay="350"><h1>Exclusive Four Hands Massage</h1></div>
+          <h5 class="font-base"><span data-caption-animate="fadeInLeft" data-caption-delay="550">Two therapists working in harmony</span></h5>
+          <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="450"><a class="button button-lg button-primary button-zakaria" href="#price">More</a></div>
+        </div></div></div></div>
+      </div>
+      <div class="swiper-slide context-dark" data-slide-bg="./service-four-hands-people-v2.png">
+        <div class="swiper-slide-caption section-lg version-2"><div class="container"><div class="row justify-content-md-center"><div class="col-md-10 text-center">
+          <div data-caption-animate="fadeInLeft" data-caption-delay="350"><h1>A Peaceful Welcome</h1></div>
+          <h5 class="font-base"><span data-caption-animate="fadeInLeft" data-caption-delay="550">Open daily • 9:00 AM – 10:00 PM</span></h5>
+          <div class="button-wrap" data-caption-animate="fadeInLeft" data-caption-delay="450"><a class="button button-lg button-primary button-zakaria" href="#contact">More</a></div>
+        </div></div></div></div>
+      </div>
+    </div>
+    <!-- Swiper Pagination-->
+    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
+  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></section>
+  <!--What We Offer-->
+  
+  <span id="about" class="omc-anchor"></span>
+  <section class="section section-xl bg-gray-1" id="services">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9 text-center wow-outer">
+          <div class="wow slideInLeft" style="visibility: visible; animation-name: slideInLeft;">
+            <h2>MASSAGE</h2>
           </div>
         </div>
       </div>
-    </section>
-
-
-    <!-- ==========================================
-         ABOUT
-    =========================================== -->
-    <section class="intro" id="about">
-      <div class="container intro-grid">
-
-        <div class="intro-image-wrap reveal">
-          <img
-            class="intro-image"
-            src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1400&q=85"
-            alt="Relaxing massage spa setting"
-            loading="lazy"
-          >
+      <div class="row no-gutters">
+        
+        <div class="col-md-6 col-lg-3">
+          <div class="wow fadeInUp team-classic-wrap" style="visibility: visible; animation-name: fadeInUp;">
+            <div class="what-we-offer">
+              <div class="what-we-offer-figure"><img src="./service-relaxation-people-v2.png" alt="Relaxation massage service with therapist" width="391" height="252"> </div>
+              <div class="what-we-offer-caption">
+                <h4>Relaxation Massage</h4>
+                <span><a class="link" href="#price">View Prices</a></span> </div>
+            </div>
+          </div>
         </div>
-
-        <div class="intro-copy reveal">
-
-          <div class="section-kicker">
-            About Jasmine Spa
+        
+        <div class="col-md-6 col-lg-3">
+          <div class="wow fadeInUp team-classic-wrap" style="visibility: visible; animation-name: fadeInUp;">
+            <div class="what-we-offer">
+              <div class="what-we-offer-figure"><img src="./service-four-hands-people-v2.png" alt="Four hands massage service with two therapists" width="391" height="252"> </div>
+              <div class="what-we-offer-caption">
+                <h4>Four Hands Massage</h4>
+                <span><a class="link" href="#price">View Prices</a></span> </div>
+            </div>
           </div>
-
-          <h2 class="section-title">
-            Put Your Body<br>
-            In Good Hands
-          </h2>
-
-          <h3>
-            A peaceful place to slow down.
-          </h3>
-
-          <p>
-            Jasmine Spa welcomes you to a relaxing massage experience in
-            Poquoson, Virginia. Whether you are looking to unwind after a
-            demanding day, ease everyday muscle tension or simply enjoy quiet
-            time for yourself, our massage services are designed to help you
-            feel comfortable and refreshed.
-          </p>
-
-          <p>
-            Choose from foot massage, therapeutic massage options including
-            Swedish, deep tissue and hot stone techniques, or enjoy a couples
-            massage together.
-          </p>
-
-          <div class="intro-details">
-
-            <div>
-              <span class="detail-label">Location</span>
-
-              <div class="detail-value">
-                458 C Wythe Creek Road<br>
-                Poquoson, VA 23662
-              </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3">
+          <div class="wow fadeInUp team-classic-wrap" style="visibility: visible; animation-name: fadeInUp;">
+            <div class="what-we-offer">
+              <div class="what-we-offer-figure"><img src="./service-relaxation-people-v2.png" alt="Relaxation massage service with therapist" width="391" height="252"> </div>
+              <div class="what-we-offer-caption">
+                <h4>30–90 Minute Options</h4>
+                <span><a class="link" href="#price">View Prices</a></span> </div>
             </div>
-
-            <div>
-              <span class="detail-label">Phone</span>
-
-              <div class="detail-value">
-                <a href="tel:+17575258188">
-                  757-525-8188
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <span class="detail-label">Hours</span>
-
-              <div class="detail-value">
-                Monday – Sunday<br>
-                8:00 AM – 10:00 PM
-              </div>
-            </div>
-
-            <div>
-              <span class="detail-label">Appointments</span>
-
-              <div class="detail-value">
-                Call or Text Us
-              </div>
-            </div>
-
           </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3">
+          <div class="wow fadeInUp team-classic-wrap" style="visibility: visible; animation-name: fadeInUp;">
+            <div class="what-we-offer">
+              <div class="what-we-offer-figure"><img src="./service-four-hands-people-v2.png" alt="Four hands massage service with two therapists" width="391" height="252"> </div>
+              <div class="what-we-offer-caption">
+                <h4>A Welcoming Spa Experience</h4>
+                <span><a class="link" href="#contact">Visit Us</a></span> </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <!--Testimonials-->
 
+<style>
+  /* 默认样式：电脑端显示，手机端隐藏 */
+  .pc-img { display: block; }
+  .mobile-img { display: none; }
+
+  /* 媒体查询：当屏幕宽度小于等于 768px（常见手机/平板尺寸）时 */
+  @media screen and (max-width: 768px) {
+    .pc-img { display: none; }      /* 隐藏电脑端图片 */
+    .mobile-img { display: block; } /* 显示手机端图片 */
+    .shouye img{width:100%!important;height:unset!important;float:left}
+  }
+</style>
+
+<!-- 电脑端图片 -->
+<a class="omc-story-banner" href="#about" style="width:100%;float:left">
+  <img src="./service-relaxation-people-v2.png" alt="Relaxation massage at Ocean Massage Spa" class="pc-img" width="100%">
+</a>
+
+<!-- 手机端图片 -->
+<a class="omc-story-banner" href="#about" style="width:100%;float:left">
+  <img src="./service-relaxation-people-v2.png" alt="Relaxation massage at Ocean Massage Spa" class="mobile-img" width="100%">
+</a>
+
+  <!--Plans & Prices-->
+ <style type="text/css" media="all">
+     
+ </style>
+
+<section class="section section-xl bg-default omc-price-section" id="price">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-9 text-center wow-outer">
+        <div class="wow slideInLeft"><h2>PRICE</h2><p class="omc-section-intro">Professional massage care with clear, simple pricing.</p></div>
+      </div>
+    </div>
+    <div class="row row-30">
+      <div class="col-md-6 wow-outer">
+        <article class="omc-service-card wow fadeInUp">
+          <div class="omc-service-image"><img src="./service-relaxation-people-v2.png" alt="Relaxation massage service with therapist" width="720" height="540"></div>
+          <div class="omc-service-body">
+            <p class="omc-service-label">Massage Services</p>
+            <h3>Relaxation Massage</h3>
+            <p class="omc-service-description">A soothing full-body massage designed to release everyday tension, calm the mind, and help you feel restored.</p>
+            <div class="omc-price-list">
+              <div><span>30 minutes</span><strong>$50</strong></div>
+              <div><span>45 minutes</span><strong>$70</strong></div>
+              <div><span>60 minutes</span><strong>$80</strong></div>
+              <div><span>90 minutes</span><strong>$130</strong></div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 wow-outer">
+        <article class="omc-service-card wow fadeInUp">
+          <div class="omc-service-image"><img src="./service-four-hands-people-v2.png" alt="Four hands massage service with two therapists" width="720" height="540"></div>
+          <div class="omc-service-body">
+            <p class="omc-service-label">Signature Experience</p>
+            <h3>Four Hands Massage</h3>
+            <p class="omc-service-description">Two massage therapists work in harmony to create a deeper, more immersive treatment and a complete sense of relaxation.</p>
+            <div class="omc-price-list">
+              <div><span>30 minutes</span><strong>$85</strong></div>
+              <div><span>45 minutes</span><strong>$120</strong></div>
+              <div><span>60 minutes</span><strong>$140</strong></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <p class="omc-gratuity">Gratuities are not included. For four-hands massage, gratuities should be considered separately for both therapists.</p>
+  </div>
+</section>
+
+  <!--Galley-->
+
+  <!--Join Us Now-->
+    <style>
+  /* 默认样式：电脑端显示，手机端隐藏 */
+  .pc-img { display: block; }
+  .mobile-img { display: none; }
+
+  /* 媒体查询：当屏幕宽度小于等于 768px（常见手机/平板尺寸）时 */
+  @media screen and (max-width: 768px) {
+    .pc-img { display: none; }      /* 隐藏电脑端图片 */
+    .mobile-img { display: block; } /* 显示手机端图片 */
+  }
+</style>
+
+<!-- 电脑端图片 -->
+<a class="omc-story-banner" href="#contact" style="width:100%;float:left">
+  <img src="./service-four-hands-people-v2.png" alt="Four hands massage at Ocean Massage Spa" class="pc-img" width="100%">
+</a>
+
+<!-- 手机端图片 -->
+<a class="omc-story-banner" href="#contact" style="width:100%;float:left">
+  <img src="./service-four-hands-people-v2.png" alt="Four hands massage at Ocean Massage Spa" class="mobile-img" width="100%">
+</a>
+  <!-- The original theme's legacy therapy grid is intentionally removed. The
+       new service and price cards above are the current service catalogue. -->
+  <section class="section section-lg omc-location" id="contact">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-9">
+          <p class="omc-service-label">Visit Ocean Massage Spa</p>
+          <h2>Relaxation in the Heart of London</h2>
+          <p>607 Princess Ave, London, ON N6B 2C1, Canada</p>
+          <p>Open daily from 9:00 AM to 10:00 PM</p>
+          <a class="button button-lg button-primary button-zakaria" href="https://www.google.com/maps/place/OCEAN+MASSAGE+SPA/@42.9924612,-81.2335393,17z/data=!3m1!4b1!4m6!3m5!1s0x882ef3fd079eaa77:0x9fbe2faf2dc94955!8m2!3d42.9924612!4d-81.2335393!16s%2Fg%2F11xcmwf6m9" target="_blank" rel="noopener">Open in Google Maps</a>
         </div>
       </div>
-    </section>
-
-
-    <!-- ==========================================
-         PHILOSOPHY
-    =========================================== -->
-    <section class="philosophy">
-      <div class="philosophy-inner reveal">
-
-        <div class="section-kicker">
-          Jasmine Spa
-        </div>
-
-        <h2 class="philosophy-title">
-          Release · Relax · Unwind
-        </h2>
-
-        <p>
-          Give your body time to rest and recharge. Our massage services
-          provide a calming break from daily stress in a welcoming,
-          comfortable spa environment.
-        </p>
-
-      </div>
-    </section>
-
-
-    <!-- ==========================================
-         SERVICES
-    =========================================== -->
-    <section class="services" id="services">
-      <div class="container">
-
-        <div class="services-head reveal">
-
-          <div class="section-kicker">
-            Our Services
+    </div>
+  </section>
+  <!--Top Instructors-->
+  <!-- Page Footer-->
+  <footer class="section footer-classic context-dark">
+    <div class="container">
+      <div class="row row-50 justify-content-lg-between">
+        <div class="col-lg-8 col-xxl-7 order-lg-2 pl-xl-5 wow-outer">
+          <div class="wow slideInRight" style="visibility: hidden; animation-name: none;">
+            <div class="row row-50">
+              
+              <div class="col-md-6">
+                <h6 class="footer-title">Phone and address</h6>
+                <ul class="list-contact-info">
+                  <li><span class="icon mdi mdi-map-marker icon-md icon-white"></span><span class="list-item-text"><a href="https://www.google.com/maps/place/OCEAN+MASSAGE+SPA/@42.9924612,-81.2335393,17z/data=!3m1!4b1!4m6!3m5!1s0x882ef3fd079eaa77:0x9fbe2faf2dc94955!8m2!3d42.9924612!4d-81.2335393!16s%2Fg%2F11xcmwf6m9" target="_blank" rel="noopener">607 Princess Ave, London, ON N6B 2C1, Canada</a></span></li>
+                  <li><span class="icon mdi mdi-phone icon-md icon-white"></span><span class="list-item-text"><a href="tel:+14164756899">+1 416-475-6899</a></span></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6 class="footer-title">Get Social</h6>
+                <p>Follow us to stay connected and receive instant updates.</p>
+                <ul class="social-list">
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook" href="#" aria-label="Facebook"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram" href="#" aria-label="Instagram"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-twitter" href="#" aria-label="Twitter"></a></li>
+                </ul>
+              </div>
+            </div>
           </div>
-
-          <h2 class="section-title">
-            Massage Services
-          </h2>
-
-          <p>
-            Select the massage and session length that works best for you.
-            Call or text Jasmine Spa to request your appointment.
-          </p>
-
         </div>
-
-
-        <div class="service-grid">
-
-          <!-- FOOT MASSAGE -->
-          <article class="service-card reveal">
-
-            <img
-              class="service-image"
-              src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1100&q=85"
-              alt="Foot massage"
-              loading="lazy"
-            >
-
-            <div class="service-content">
-
-              <div class="service-number">
-                Service 01
+        <div class="col-lg-4 order-lg-1 pr-xl-5 wow-outer">
+          <div class="wow slideInLeft" style="visibility: hidden; animation-name: none;">
+            <div class="row row-30">
+              
+              <div class="col-12">
+                <p>Ocean Massage Spa<br>Relaxation Massage • Four Hands Massage<br>Welcome to a calm, welcoming space for professional massage care in London, Ontario.</p>
+                <div class="footer-divider"></div>
+                <p class="rights">Copyright © 2026 Ocean Massage Spa. All Rights Reserved.</p>
               </div>
-
-              <h3>Foot Massage</h3>
-
-              <div class="service-style">
-                Relax · Refresh · Recharge
-              </div>
-
-              <table class="price-table">
-
-                <thead>
-                  <tr>
-                    <th>Time</th>
-                    <th>Cash</th>
-                    <th>Card</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td>30 Min</td>
-                    <td>$35</td>
-                    <td>—</td>
-                  </tr>
-
-                  <tr>
-                    <td>45 Min</td>
-                    <td>$50</td>
-                    <td>$53</td>
-                  </tr>
-
-                  <tr>
-                    <td>60 Min</td>
-                    <td>$60</td>
-                    <td>$65</td>
-                  </tr>
-                </tbody>
-
-              </table>
-
-              <a
-                href="#"
-                class="btn service-book sms-link"
-                data-message="Hi Jasmine Spa, I would like to book a Foot Massage. Preferred date/time: "
-              >
-                Text To Book
-              </a>
-
             </div>
-          </article>
-
-
-          <!-- THERAPEUTIC MASSAGE -->
-          <article class="service-card reveal">
-
-            <img
-              class="service-image"
-              src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1100&q=85"
-              alt="Therapeutic massage"
-              loading="lazy"
-            >
-
-            <div class="service-content">
-
-              <div class="service-number">
-                Service 02
-              </div>
-
-              <h3>Therapeutic Massage</h3>
-
-              <div class="service-style">
-                Swedish · Deep Tissue · Hot Stone
-              </div>
-
-              <table class="price-table">
-
-                <thead>
-                  <tr>
-                    <th>Time</th>
-                    <th>Cash</th>
-                    <th>Card</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td>30 Min</td>
-                    <td>$50</td>
-                    <td>$53</td>
-                  </tr>
-
-                  <tr>
-                    <td>45 Min</td>
-                    <td>$60</td>
-                    <td>$65</td>
-                  </tr>
-
-                  <tr>
-                    <td>60 Min</td>
-                    <td>$70</td>
-                    <td>$75</td>
-                  </tr>
-
-                  <tr>
-                    <td>90 Min</td>
-                    <td>$105</td>
-                    <td>$110</td>
-                  </tr>
-
-                  <tr>
-                    <td>120 Min</td>
-                    <td>$140</td>
-                    <td>$150</td>
-                  </tr>
-                </tbody>
-
-              </table>
-
-              <a
-                href="#"
-                class="btn service-book sms-link"
-                data-message="Hi Jasmine Spa, I would like to book a Therapeutic Massage. Preferred massage type/date/time: "
-              >
-                Text To Book
-              </a>
-
-            </div>
-          </article>
-
-
-          <!-- COUPLES MASSAGE -->
-          <article class="service-card reveal">
-
-            <img
-              class="service-image"
-              src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1100&q=85"
-              alt="Couples massage"
-              loading="lazy"
-            >
-
-            <div class="service-content">
-
-              <div class="service-number">
-                Service 03
-              </div>
-
-              <h3>Couples Massage</h3>
-
-              <div class="service-style">
-                Relax Together
-              </div>
-
-              <table class="price-table">
-
-                <thead>
-                  <tr>
-                    <th>Time</th>
-                    <th>Cash</th>
-                    <th>Card</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td>30 Min</td>
-                    <td>$100</td>
-                    <td>$106</td>
-                  </tr>
-
-                  <tr>
-                    <td>45 Min</td>
-                    <td>$120</td>
-                    <td>$130</td>
-                  </tr>
-
-                  <tr>
-                    <td>60 Min</td>
-                    <td>$140</td>
-                    <td>$150</td>
-                  </tr>
-
-                  <tr>
-                    <td>90 Min</td>
-                    <td>$210</td>
-                    <td>$220</td>
-                  </tr>
-                </tbody>
-
-              </table>
-
-              <a
-                href="#"
-                class="btn service-book sms-link"
-                data-message="Hi Jasmine Spa, I would like to book a Couples Massage. Preferred date/time: "
-              >
-                Text To Book
-              </a>
-
-            </div>
-          </article>
-
-        </div>
-
-        <p class="pricing-note">
-          Please contact Jasmine Spa for appointment availability.
-          Prices and availability may be subject to change.
-        </p>
-
-      </div>
-    </section>
-
-
-    <!-- ==========================================
-         BOOK APPOINTMENT
-    =========================================== -->
-    <section class="appointment">
-      <div class="container appointment-grid">
-
-        <div class="reveal">
-
-          <div class="section-kicker">
-            Book Your Appointment
           </div>
-
-          <h2>
-            Ready to relax?
-          </h2>
-
-          <p>
-            Send Jasmine Spa a text message with your preferred service,
-            date and time, or call us directly.
-          </p>
-
         </div>
-
-        <div class="appointment-buttons reveal">
-
-          <a
-            href="tel:+17575258188"
-            class="btn btn-outline-dark"
-          >
-            Call
-          </a>
-
-          <a
-            href="#"
-            class="btn btn-dark sms-link"
-            data-message="Hi Jasmine Spa, I would like to make an appointment. Service: ___ Date: ___ Time: ___"
-          >
-            Text Booking
-          </a>
-
-        </div>
-
       </div>
-    </section>
-
-
-    <!-- ==========================================
-         CONTACT
-    =========================================== -->
-    <section class="contact" id="contact">
-
-      <div class="container contact-header reveal">
-
-        <div class="section-kicker">
-          Contact
-        </div>
-
-        <h2 class="section-title">
-          Visit Jasmine Spa
-        </h2>
-
-      </div>
-
-
-      <div class="contact-grid">
-
-        <div class="contact-panel">
-
-          <div class="section-kicker">
-            Book Your Appointment
-          </div>
-
-          <h3>
-            Call or text us to schedule your massage.
-          </h3>
-
-          <div class="contact-items">
-
-            <div class="contact-item">
-
-              <span class="contact-label">
-                Call
-              </span>
-
-              <div class="contact-value">
-                <a href="tel:+17575258188">
-                  757-525-8188
-                </a>
-              </div>
-
-            </div>
-
-
-            <div class="contact-item">
-
-              <span class="contact-label">
-                Text Booking
-              </span>
-
-              <div class="contact-value">
-                <a
-                  href="#"
-                  class="sms-link"
-                  data-message="Hi Jasmine Spa, I would like to book a massage appointment. Preferred service/date/time: "
-                >
-                  Send Appointment Text
-                </a>
-              </div>
-
-            </div>
-
-
-            <div class="contact-item">
-
-              <span class="contact-label">
-                Address
-              </span>
-
-              <div class="contact-value">
-                458 C Wythe Creek Road<br>
-                Poquoson, VA 23662
-              </div>
-
-            </div>
-
-
-            <div class="contact-item">
-
-              <span class="contact-label">
-                Hours
-              </span>
-
-              <div class="contact-value">
-                Monday – Sunday<br>
-                8:00 AM – 10:00 PM
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="contact-actions">
-
-            <a
-              href="tel:+17575258188"
-              class="btn btn-light"
-            >
-              Call Now
-            </a>
-
-            <a
-              href="#"
-              class="btn btn-outline-light sms-link"
-              data-message="Hi Jasmine Spa, I would like to make an appointment. Service: ___ Date: ___ Time: ___"
-            >
-              Text To Book
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <div class="map-wrap">
-
-          <iframe
-            title="Jasmine Spa location"
-            src="https://www.google.com/maps?q=458%20C%20Wythe%20Creek%20Road%2C%20Poquoson%2C%20VA%2023662&output=embed"
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- ==========================================
-       FOOTER
-  =========================================== -->
-  <footer>
-    <div class="container footer-grid">
-
-      <a href="#home" class="footer-brand">
-        Jasmine Spa
-      </a>
-
-      <div class="footer-copy">
-        © <span id="year"></span> Jasmine Spa · Poquoson, Virginia
-      </div>
-
-      <a class="footer-phone" href="tel:+17575258188">
-        757-525-8188
-      </a>
-
     </div>
   </footer>
-
-
-  <!-- ==========================================
-       MOBILE CALL / TEXT BAR
-  =========================================== -->
-  <div class="mobile-actions">
-
-    <a
-      href="tel:+17575258188"
-      class="mobile-call"
-    >
-      Call
-    </a>
-
-    <a
-      href="#"
-      class="mobile-text sms-link"
-      data-message="Hi Jasmine Spa, I would like to book a massage appointment. Service: ___ Date: ___ Time: ___"
-    >
-      Text Booking
-    </a>
-
-  </div>
-
-
-  <!-- ==========================================
-       JAVASCRIPT
-  =========================================== -->
-  <script>
-    /*
-      Jasmine Spa
-      Phone:
-      757-525-8188
-
-      SMS booking behavior:
-      Clicking every "Text Booking" button opens the customer's
-      phone messaging application and prepares a text addressed
-      to Jasmine Spa.
-    */
-
-    const JASMINE_PHONE = "+17575258188";
-
-
-    /* ==========================================
-       SMS BOOKING
-    =========================================== */
-
-    function openSMS(message) {
-      const encodedMessage = encodeURIComponent(message);
-
-      const isIOS =
-        /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-        (
-          navigator.platform === "MacIntel" &&
-          navigator.maxTouchPoints > 1
-        );
-
-      /*
-        iOS commonly uses:
-        sms:number&body=text
-
-        Android / most other mobile devices commonly use:
-        sms:number?body=text
-      */
-
-      const smsURL = isIOS
-        ? `sms:${JASMINE_PHONE}&body=${encodedMessage}`
-        : `sms:${JASMINE_PHONE}?body=${encodedMessage}`;
-
-      window.location.href = smsURL;
-    }
-
-
-    document.querySelectorAll(".sms-link").forEach(function(link) {
-
-      link.addEventListener("click", function(event) {
-
+</div>
+<div class="snackbars" id="form-output-global"></div>
+<script src="./Aquadora Wellness Center _ Professional Massage Spa in Windsor Ontario_files/core.min.js.download"></script> 
+<script src="./Aquadora Wellness Center _ Professional Massage Spa in Windsor Ontario_files/script.js.download"></script>
+<script>
+  // Keep the original theme navigation, while making the new local anchors
+  // reliably scroll to their sections in both desktop and mobile previews.
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        var selector = link.getAttribute('href');
+        if (!selector || selector === '#') return;
+        var target = document.querySelector(selector);
+        if (!target) return;
         event.preventDefault();
-
-        const message =
-          link.getAttribute("data-message") ||
-          "Hi Jasmine Spa, I would like to book a massage appointment.";
-
-        openSMS(message);
-
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, '', selector);
       });
-
     });
+  });
+</script>
 
-
-    /* ==========================================
-       MOBILE MENU
-    =========================================== */
-
-    const mobileMenuButton =
-      document.getElementById("mobileMenuButton");
-
-    const mobileMenu =
-      document.getElementById("mobileMenu");
-
-
-    mobileMenuButton.addEventListener("click", function() {
-
-      const isOpen =
-        mobileMenu.classList.toggle("open");
-
-      mobileMenuButton.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
-
-    });
-
-
-    mobileMenu.querySelectorAll("a").forEach(function(link) {
-
-      link.addEventListener("click", function() {
-
-        mobileMenu.classList.remove("open");
-
-        mobileMenuButton.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      });
-
-    });
-
-
-    /* ==========================================
-       SCROLL REVEAL
-    =========================================== */
-
-    const revealItems =
-      document.querySelectorAll(".reveal");
-
-
-    if ("IntersectionObserver" in window) {
-
-      const revealObserver =
-        new IntersectionObserver(
-          function(entries, observer) {
-
-            entries.forEach(function(entry) {
-
-              if (entry.isIntersecting) {
-
-                entry.target.classList.add("visible");
-
-                observer.unobserve(entry.target);
-
-              }
-
-            });
-
-          },
-          {
-            threshold: 0.12
-          }
-        );
-
-
-      revealItems.forEach(function(item) {
-        revealObserver.observe(item);
-      });
-
-    } else {
-
-      revealItems.forEach(function(item) {
-        item.classList.add("visible");
-      });
-
-    }
-
-
-    /* ==========================================
-       COPYRIGHT YEAR
-    =========================================== */
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-  </script>
-
-</body>
-</html>
+<a href="#home" id="ui-to-top" class="ui-to-top fa fa-angle-up"></a></body></html>
