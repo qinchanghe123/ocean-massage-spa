@@ -5,48 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Ocean Massage Spa in London, Ontario — a quiet, private massage spa offering Relaxation Massage and Four Hands Massage."
+    content="Ocean Massage Spa in London, Ontario — a quiet, elegant massage spa offering Relaxation Massage and Four Hands Massage."
   />
-  <meta name="theme-color" content="#0d1916" />
+  <meta name="theme-color" content="#132724" />
+
   <title>Ocean Massage Spa | London, Ontario</title>
 
-  <!-- Elegant typography -->
+  <!-- Elegant serif + modern sans-serif -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   />
 
   <style>
     /* =========================================================
        OCEAN MASSAGE SPA
-       Single-file luxury responsive website
+       Romantic / Ethereal Luxury Edition
        ========================================================= */
 
     :root {
-      --ink: #091310;
-      --deep: #0d1916;
-      --forest: #13231e;
-      --forest-soft: #1b3029;
-      --ivory: #f5f0e6;
-      --cream: #ebe2d3;
-      --warm: #d9c9b4;
-      --gold: #c8a66b;
-      --gold-light: #e2c58f;
-      --gold-dark: #8d6b3d;
-      --text: #28322e;
-      --muted: #6f7773;
-      --white: #fffdf8;
-      --line: rgba(200, 166, 107, 0.24);
-      --dark-line: rgba(255, 255, 255, 0.1);
-      --shadow: 0 28px 70px rgba(8, 18, 15, 0.12);
-      --shadow-dark: 0 28px 80px rgba(0, 0, 0, 0.3);
-      --radius: 28px;
-      --radius-sm: 18px;
-      --container: min(1180px, calc(100% - 42px));
+      --ocean: #132724;
+      --ocean-2: #1b3833;
+      --ocean-3: #274c46;
+      --sage: #9baea4;
+
+      --pearl: #fffaf4;
+      --ivory: #f7f2e9;
+      --sand: #e9dfd1;
+      --mist: #edf0eb;
+      --warm: #d7c7b4;
+
+      --gold: #c3a16c;
+      --gold-light: #e3c994;
+      --gold-pale: #f1dfbb;
+
+      --ink: #18231f;
+      --body: #5d6863;
+      --soft: #84908a;
+
+      --white-line: rgba(255, 255, 255, 0.12);
+      --dark-line: rgba(18, 39, 36, 0.09);
+
       --serif: "Cormorant Garamond", Georgia, serif;
       --sans: "Manrope", Arial, sans-serif;
+
+      --container: min(1180px, calc(100% - 44px));
+
+      --shadow:
+        0 30px 90px rgba(22, 42, 37, 0.12);
+
+      --shadow-dark:
+        0 40px 110px rgba(0, 0, 0, 0.27);
+
+      --radius-xl: 42px;
+      --radius-lg: 28px;
+      --radius-md: 20px;
     }
 
     * {
@@ -61,12 +76,11 @@
     }
 
     body {
-      background: var(--ivory);
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 16px;
-      line-height: 1.7;
       overflow-x: hidden;
+      background: var(--ivory);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.75;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -80,30 +94,25 @@
       max-width: 100%;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
     button,
     input,
-    textarea,
-    select {
+    select,
+    textarea {
       font: inherit;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
     }
 
     button {
       cursor: pointer;
     }
 
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     ::selection {
-      background: var(--gold);
-      color: var(--deep);
+      background: var(--gold-light);
+      color: var(--ocean);
     }
 
     .container {
@@ -113,18 +122,18 @@
 
     .section {
       position: relative;
-      padding: clamp(82px, 10vw, 140px) 0;
+      padding: clamp(88px, 10vw, 150px) 0;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-      color: var(--gold-dark);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
+      gap: 13px;
+      margin-bottom: 17px;
+      color: #98784b;
+      font-size: 0.69rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
     }
 
@@ -139,142 +148,154 @@
       color: var(--gold-light);
     }
 
+    .eyebrow.center::before {
+      display: none;
+    }
+
     h1,
     h2,
     h3,
     h4 {
       font-family: var(--serif);
       font-weight: 500;
-      line-height: 1;
     }
 
     h2 {
-      color: var(--deep);
-      font-size: clamp(2.8rem, 6vw, 5.1rem);
-      letter-spacing: -0.035em;
+      color: var(--ocean);
+      font-size: clamp(3rem, 6vw, 5.35rem);
+      letter-spacing: -0.045em;
+      line-height: 0.94;
     }
 
-    .section-intro {
+    .section-copy {
       max-width: 660px;
-      margin-top: 24px;
-      color: var(--muted);
-      font-size: clamp(1rem, 1.4vw, 1.12rem);
+      margin-top: 25px;
+      color: var(--body);
+      font-size: clamp(0.95rem, 1.3vw, 1.08rem);
     }
 
-    .section-heading.center {
+    .center-heading {
+      max-width: 790px;
       margin-inline: auto;
       text-align: center;
     }
 
-    .section-heading.center .section-intro {
+    .center-heading .section-copy {
       margin-inline: auto;
     }
 
-    .section-heading.center .eyebrow::before {
-      display: none;
+    .italic {
+      font-style: italic;
+      font-weight: 400;
     }
+
+    /* =========================================================
+       BUTTONS
+       ========================================================= */
 
     .btn {
       display: inline-flex;
-      min-height: 54px;
+      min-height: 55px;
       align-items: center;
       justify-content: center;
       gap: 10px;
       border: 1px solid transparent;
       border-radius: 999px;
-      padding: 14px 26px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+      padding: 14px 27px;
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       transition:
         transform 0.35s ease,
         box-shadow 0.35s ease,
-        background 0.35s ease,
         color 0.35s ease,
+        background 0.35s ease,
         border-color 0.35s ease;
     }
 
     .btn:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--gold-light), var(--gold));
-      color: #172019;
-      box-shadow: 0 14px 34px rgba(200, 166, 107, 0.24);
+    .btn-gold {
+      background:
+        linear-gradient(135deg, #ecd4a5 0%, #c8a36d 100%);
+      color: #17241f;
+      box-shadow: 0 16px 40px rgba(195, 161, 108, 0.22);
     }
 
-    .btn-primary:hover {
-      box-shadow: 0 18px 42px rgba(200, 166, 107, 0.35);
+    .btn-gold:hover {
+      box-shadow: 0 20px 48px rgba(195, 161, 108, 0.35);
     }
 
-    .btn-outline {
-      border-color: rgba(255, 255, 255, 0.38);
-      color: var(--white);
-      backdrop-filter: blur(9px);
+    .btn-glass {
+      border-color: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.06);
+      color: white;
+      backdrop-filter: blur(14px);
     }
 
-    .btn-outline:hover {
-      border-color: var(--gold-light);
-      background: rgba(255, 255, 255, 0.08);
+    .btn-glass:hover {
+      border-color: rgba(227, 201, 148, 0.6);
+      background: rgba(255, 255, 255, 0.1);
     }
 
     .btn-dark {
-      border-color: rgba(13, 25, 22, 0.15);
-      background: var(--deep);
-      color: var(--white);
+      background: var(--ocean);
+      color: white;
     }
 
     .btn-dark:hover {
-      background: var(--forest-soft);
+      background: var(--ocean-2);
     }
 
     .btn svg {
-      width: 17px;
-      height: 17px;
+      width: 16px;
+      height: 16px;
     }
+
+    /* =========================================================
+       REVEAL
+       ========================================================= */
 
     .reveal {
       opacity: 0;
       transform: translateY(28px);
       transition:
-        opacity 0.8s ease,
-        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
-    .reveal.visible {
+    .reveal.show {
       opacity: 1;
-      transform: none;
+      transform: translateY(0);
     }
 
     /* =========================================================
        HEADER
        ========================================================= */
 
-    .site-header {
+    .header {
       position: fixed;
       z-index: 1000;
-      top: 0;
-      left: 0;
-      width: 100%;
-      border-bottom: 1px solid transparent;
+      inset: 0 0 auto;
       transition:
         background 0.4s ease,
         border-color 0.4s ease,
         box-shadow 0.4s ease;
     }
 
-    .site-header.scrolled {
-      border-color: rgba(255, 255, 255, 0.08);
-      background: rgba(9, 19, 16, 0.9);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.16);
+    .header.scrolled {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(13, 29, 26, 0.88);
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.14);
       backdrop-filter: blur(18px);
     }
 
-    .nav-wrap {
+    .nav {
       display: flex;
-      min-height: 84px;
+      min-height: 86px;
       align-items: center;
       justify-content: space-between;
       gap: 28px;
@@ -284,63 +305,73 @@
       display: flex;
       flex-shrink: 0;
       align-items: center;
-      gap: 12px;
-      color: var(--white);
+      gap: 13px;
+      color: white;
     }
 
-    .brand-mark {
+    .brand-orbit {
+      position: relative;
       display: grid;
-      width: 39px;
-      height: 39px;
+      width: 43px;
+      height: 43px;
       place-items: center;
-      border: 1px solid rgba(226, 197, 143, 0.5);
+      border: 1px solid rgba(227, 201, 148, 0.5);
       border-radius: 50%;
+    }
+
+    .brand-orbit::before {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba(227, 201, 148, 0.18);
+      border-radius: inherit;
+    }
+
+    .brand-orbit svg {
+      width: 21px;
+      height: 21px;
       color: var(--gold-light);
     }
 
-    .brand-mark svg {
-      width: 21px;
-      height: 21px;
-    }
-
-    .brand-text {
-      display: grid;
-      line-height: 1.05;
-    }
-
     .brand-name {
+      display: block;
       font-family: var(--serif);
-      font-size: 1.38rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
+      font-size: 1.42rem;
+      font-weight: 500;
+      line-height: 1;
     }
 
-    .brand-subtitle {
-      margin-top: 3px;
-      color: rgba(255, 255, 255, 0.54);
-      font-size: 0.57rem;
-      font-weight: 700;
-      letter-spacing: 0.19em;
+    .brand-location {
+      display: block;
+      margin-top: 5px;
+      color: rgba(255, 255, 255, 0.48);
+      font-size: 0.56rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
     }
 
     .desktop-nav {
       display: flex;
       align-items: center;
-      gap: clamp(16px, 2vw, 27px);
+      gap: clamp(17px, 2vw, 29px);
     }
 
-    .desktop-nav > a:not(.nav-book) {
+    .desktop-nav > a:not(.btn) {
       position: relative;
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 0.74rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       transition: color 0.3s ease;
     }
 
-    .desktop-nav > a:not(.nav-book)::after {
+    .desktop-nav > a:not(.btn):hover {
+      color: white;
+    }
+
+    .desktop-nav > a:not(.btn)::after {
       content: "";
       position: absolute;
       right: 0;
@@ -352,37 +383,33 @@
       transition: transform 0.3s ease;
     }
 
-    .desktop-nav > a:not(.nav-book):hover {
-      color: var(--white);
-    }
-
-    .desktop-nav > a:not(.nav-book):hover::after {
+    .desktop-nav > a:hover::after {
       transform: scaleX(1);
     }
 
     .nav-book {
-      min-height: 42px;
-      padding: 10px 18px;
+      min-height: 43px;
+      padding: 10px 20px;
     }
 
-    .menu-toggle {
+    .menu-button {
       display: none;
       width: 46px;
       height: 46px;
       place-items: center;
       border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.06);
       color: white;
     }
 
-    .menu-icon {
+    .hamburger {
       position: relative;
-      width: 19px;
+      width: 18px;
       height: 14px;
     }
 
-    .menu-icon span {
+    .hamburger span {
       position: absolute;
       left: 0;
       width: 100%;
@@ -391,20 +418,20 @@
       transition: 0.3s ease;
     }
 
-    .menu-icon span:nth-child(1) { top: 1px; }
-    .menu-icon span:nth-child(2) { top: 7px; }
-    .menu-icon span:nth-child(3) { top: 13px; }
+    .hamburger span:nth-child(1) { top: 1px; }
+    .hamburger span:nth-child(2) { top: 7px; }
+    .hamburger span:nth-child(3) { top: 13px; }
 
-    .menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(1) {
+    .menu-button[aria-expanded="true"] .hamburger span:nth-child(1) {
       top: 7px;
       transform: rotate(45deg);
     }
 
-    .menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(2) {
+    .menu-button[aria-expanded="true"] .hamburger span:nth-child(2) {
       opacity: 0;
     }
 
-    .menu-toggle[aria-expanded="true"] .menu-icon span:nth-child(3) {
+    .menu-button[aria-expanded="true"] .hamburger span:nth-child(3) {
       top: 7px;
       transform: rotate(-45deg);
     }
@@ -423,25 +450,24 @@
       min-height: 100svh;
       align-items: flex-end;
       overflow: hidden;
-      background: var(--deep);
-      color: var(--white);
+      background: var(--ocean);
+      color: white;
     }
 
-    .hero-slides {
+    .hero-slides,
+    .hero-slide {
       position: absolute;
       inset: 0;
     }
 
     .hero-slide {
-      position: absolute;
-      inset: -2%;
       opacity: 0;
       background-position: center;
       background-size: cover;
-      transform: scale(1.055);
+      transform: scale(1.07);
       transition:
-        opacity 1.5s ease,
-        transform 7.5s ease;
+        opacity 1.7s ease,
+        transform 8s ease;
     }
 
     .hero-slide.active {
@@ -449,139 +475,250 @@
       transform: scale(1);
     }
 
-    .hero::before {
-      content: "";
+    .hero-overlay {
       position: absolute;
       z-index: 1;
       inset: 0;
       background:
-        linear-gradient(90deg, rgba(5, 13, 11, 0.86) 0%, rgba(5, 13, 11, 0.54) 46%, rgba(5, 13, 11, 0.25) 100%),
-        linear-gradient(0deg, rgba(5, 13, 11, 0.88) 0%, rgba(5, 13, 11, 0.08) 54%, rgba(5, 13, 11, 0.3) 100%);
+        linear-gradient(
+          90deg,
+          rgba(8, 25, 22, 0.91) 0%,
+          rgba(8, 25, 22, 0.68) 42%,
+          rgba(8, 25, 22, 0.22) 77%,
+          rgba(8, 25, 22, 0.18) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(7, 19, 17, 0.88) 0%,
+          transparent 54%
+        );
     }
 
-    .hero::after {
-      content: "";
+    .hero-glow {
       position: absolute;
       z-index: 1;
-      right: -10%;
-      bottom: -28%;
-      width: 620px;
-      height: 620px;
       border-radius: 50%;
-      background: rgba(197, 158, 92, 0.14);
-      filter: blur(110px);
+      pointer-events: none;
+      filter: blur(90px);
+    }
+
+    .hero-glow.one {
+      top: 18%;
+      left: 31%;
+      width: 350px;
+      height: 350px;
+      background: rgba(218, 190, 138, 0.12);
+      animation: floatGlow 11s ease-in-out infinite alternate;
+    }
+
+    .hero-glow.two {
+      right: -100px;
+      bottom: -160px;
+      width: 520px;
+      height: 520px;
+      background: rgba(78, 129, 116, 0.18);
+      animation: floatGlow 14s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes floatGlow {
+      from {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      to {
+        transform: translate3d(30px, -25px, 0) scale(1.08);
+      }
     }
 
     .hero-content {
       position: relative;
-      z-index: 2;
+      z-index: 5;
       width: 100%;
-      padding-top: 150px;
-      padding-bottom: clamp(54px, 8vw, 94px);
+      padding: 145px 0 clamp(70px, 9vw, 115px);
     }
 
-    .hero-inner {
-      max-width: 930px;
+    .hero-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.65fr);
+      align-items: end;
+      gap: 70px;
+    }
+
+    .hero-copy-wrap {
+      max-width: 860px;
     }
 
     .hero-kicker {
       display: flex;
       align-items: center;
-      gap: 13px;
-      margin-bottom: 20px;
+      gap: 14px;
+      margin-bottom: 23px;
       color: var(--gold-light);
-      font-size: 0.69rem;
-      font-weight: 700;
-      letter-spacing: 0.22em;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.23em;
       text-transform: uppercase;
     }
 
     .hero-kicker::before {
       content: "";
-      width: 44px;
+      width: 47px;
       height: 1px;
       background: var(--gold-light);
     }
 
     .hero h1 {
-      max-width: 850px;
-      color: var(--white);
-      font-size: clamp(4rem, 10vw, 8.4rem);
-      letter-spacing: -0.052em;
-      line-height: 0.84;
+      max-width: 870px;
+      font-size: clamp(4.4rem, 9vw, 8.4rem);
+      font-weight: 400;
+      letter-spacing: -0.055em;
+      line-height: 0.83;
       text-wrap: balance;
     }
 
     .hero h1 em {
+      display: inline-block;
       color: var(--gold-light);
       font-weight: 400;
     }
 
-    .hero-copy {
-      max-width: 590px;
-      margin-top: 28px;
-      color: rgba(255, 255, 255, 0.73);
-      font-size: clamp(1rem, 1.5vw, 1.13rem);
+    .hero-description {
+      max-width: 600px;
+      margin-top: 31px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: clamp(0.98rem, 1.4vw, 1.12rem);
       font-weight: 300;
+      line-height: 1.85;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 34px;
+      margin-top: 36px;
     }
 
-    .hero-trust {
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 30px;
+      padding: 29px;
+      background: rgba(255, 255, 255, 0.075);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.16);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      top: -70px;
+      right: -70px;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      background: rgba(227, 201, 148, 0.11);
+    }
+
+    .hero-card-label {
+      color: var(--gold-light);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.19em;
+      text-transform: uppercase;
+    }
+
+    .hero-card h3 {
+      margin-top: 13px;
+      color: white;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .hero-card p {
+      margin-top: 13px;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.78rem;
+    }
+
+    .hero-card-divider {
+      width: 100%;
+      height: 1px;
+      margin: 22px 0;
+      background: rgba(255, 255, 255, 0.11);
+    }
+
+    .hero-card-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 10px;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.73rem;
+    }
+
+    .hero-card-row strong {
+      color: white;
+      font-weight: 500;
+    }
+
+    .hero-bottom {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 45px;
     }
 
-    .trust-pill {
-      display: flex;
+    .hero-pill {
+      display: inline-flex;
       align-items: center;
-      gap: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      gap: 9px;
+      border: 1px solid rgba(255, 255, 255, 0.11);
       border-radius: 999px;
-      padding: 9px 13px;
-      background: rgba(255, 255, 255, 0.055);
-      color: rgba(255, 255, 255, 0.72);
-      font-size: 0.7rem;
-      letter-spacing: 0.05em;
+      padding: 9px 14px;
+      background: rgba(255, 255, 255, 0.04);
+      color: rgba(255, 255, 255, 0.63);
+      font-size: 0.67rem;
       backdrop-filter: blur(8px);
     }
 
-    .trust-dot {
+    .hero-pill::before {
+      content: "";
       width: 5px;
       height: 5px;
       border-radius: 50%;
       background: var(--gold-light);
-      box-shadow: 0 0 0 5px rgba(226, 197, 143, 0.11);
+      box-shadow: 0 0 0 5px rgba(227, 201, 148, 0.09);
     }
 
-    .hero-side {
+    .hero-wave {
       position: absolute;
       z-index: 3;
-      right: 28px;
-      bottom: 60px;
-      display: grid;
-      justify-items: center;
-      gap: 18px;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: auto;
+      color: var(--ivory);
+      pointer-events: none;
     }
 
     .hero-dots {
+      position: absolute;
+      z-index: 7;
+      right: 33px;
+      bottom: 90px;
       display: grid;
-      gap: 9px;
+      gap: 8px;
     }
 
     .hero-dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border: 0;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.38);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.4);
       transition:
         height 0.3s ease,
         background 0.3s ease;
@@ -589,70 +726,87 @@
 
     .hero-dot.active {
       height: 29px;
-      border-radius: 999px;
       background: var(--gold-light);
     }
 
-    .scroll-label {
-      color: rgba(255, 255, 255, 0.48);
-      font-size: 0.58rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      writing-mode: vertical-rl;
-    }
-
     /* =========================================================
-       INTRO STRIP
+       MINI INTRO
        ========================================================= */
 
-    .intro-strip {
-      position: relative;
-      z-index: 4;
-      background: var(--deep);
-      color: white;
+    .intro {
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 12% 20%,
+          rgba(195, 161, 108, 0.12),
+          transparent 24%
+        ),
+        var(--ivory);
     }
 
-    .intro-strip-grid {
+    .intro-wrap {
       display: grid;
-      grid-template-columns: 1.25fr repeat(3, 0.75fr);
-      border-top: 1px solid var(--dark-line);
+      grid-template-columns: 0.75fr 1.25fr;
+      align-items: center;
+      gap: clamp(50px, 8vw, 105px);
     }
 
-    .strip-item {
-      min-height: 130px;
-      border-right: 1px solid var(--dark-line);
-      padding: 28px;
+    .intro-quote {
+      position: relative;
+      padding-left: 44px;
     }
 
-    .strip-item:last-child {
-      border-right: 0;
+    .intro-quote::before {
+      content: "“";
+      position: absolute;
+      top: -29px;
+      left: -6px;
+      color: rgba(195, 161, 108, 0.28);
+      font-family: var(--serif);
+      font-size: 7rem;
+      line-height: 1;
     }
 
-    .strip-item strong {
+    .intro-quote p {
+      color: var(--ocean);
+      font-family: var(--serif);
+      font-size: clamp(2.25rem, 4vw, 3.65rem);
+      font-style: italic;
+      line-height: 1.05;
+    }
+
+    .intro-text {
+      max-width: 660px;
+    }
+
+    .intro-text p {
+      color: var(--body);
+    }
+
+    .intro-numbers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      margin-top: 34px;
+    }
+
+    .number-card {
+      border-top: 1px solid rgba(18, 39, 36, 0.13);
+      padding-top: 18px;
+    }
+
+    .number-card strong {
       display: block;
-      color: var(--gold-light);
+      color: var(--ocean);
       font-family: var(--serif);
       font-size: 2rem;
       font-weight: 500;
     }
 
-    .strip-item span {
-      color: rgba(255, 255, 255, 0.57);
-      font-size: 0.74rem;
-      letter-spacing: 0.06em;
-    }
-
-    .strip-lead {
-      display: flex;
-      align-items: center;
-    }
-
-    .strip-lead p {
-      max-width: 420px;
-      color: rgba(255, 255, 255, 0.7);
-      font-family: var(--serif);
-      font-size: clamp(1.35rem, 2.4vw, 2rem);
-      line-height: 1.12;
+    .number-card span {
+      color: var(--soft);
+      font-size: 0.67rem;
+      letter-spacing: 0.07em;
     }
 
     /* =========================================================
@@ -661,129 +815,138 @@
 
     .about {
       overflow: hidden;
-      background:
-        radial-gradient(circle at 10% 20%, rgba(200, 166, 107, 0.13), transparent 22%),
-        var(--ivory);
+      background: var(--mist);
+    }
+
+    .about::before {
+      content: "";
+      position: absolute;
+      top: -240px;
+      right: -230px;
+      width: 560px;
+      height: 560px;
+      border-radius: 50%;
+      border: 1px solid rgba(195, 161, 108, 0.12);
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
       align-items: center;
-      gap: clamp(52px, 8vw, 110px);
+      gap: clamp(55px, 9vw, 120px);
     }
 
     .about-visual {
       position: relative;
-      min-height: 650px;
+      min-height: 700px;
     }
 
-    .about-img-main {
+    .about-main {
       position: absolute;
       top: 0;
-      left: 0;
-      width: 77%;
-      height: 78%;
+      right: 0;
+      width: 82%;
+      height: 83%;
       overflow: hidden;
-      border-radius: 190px 190px 26px 26px;
-      background: #cbbca9;
+      border-radius: 220px 220px 26px 26px;
+      background: var(--warm);
       box-shadow: var(--shadow);
     }
 
-    .about-img-main img,
-    .about-img-small img {
+    .about-main img,
+    .about-small img {
+      width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .about-img-small {
+    .about-small {
       position: absolute;
-      right: 0;
       bottom: 0;
-      width: 46%;
+      left: 0;
+      width: 49%;
       height: 42%;
       overflow: hidden;
-      border: 10px solid var(--ivory);
-      border-radius: 26px;
-      background: #b9aa96;
+      border: 10px solid var(--mist);
+      border-radius: 28px;
+      background: var(--warm);
       box-shadow: var(--shadow);
     }
 
-    .about-seal {
+    .about-flower {
       position: absolute;
-      right: 7%;
-      top: 8%;
-      z-index: 2;
+      top: 11%;
+      left: 1%;
+      z-index: 4;
       display: grid;
-      width: 128px;
-      height: 128px;
+      width: 125px;
+      height: 125px;
       place-items: center;
-      border: 1px solid rgba(200, 166, 107, 0.45);
+      border: 1px solid rgba(195, 161, 108, 0.33);
       border-radius: 50%;
-      background: rgba(245, 240, 230, 0.93);
-      color: var(--gold-dark);
-      text-align: center;
-      backdrop-filter: blur(10px);
+      background: rgba(250, 247, 240, 0.8);
+      color: #9c7a4c;
+      backdrop-filter: blur(12px);
     }
 
-    .about-seal span {
-      max-width: 78px;
+    .about-flower svg {
+      width: 48px;
+      height: 48px;
+      opacity: 0.82;
+    }
+
+    .about-content .lead {
+      margin-top: 27px;
+      color: #354640;
       font-family: var(--serif);
-      font-size: 1.04rem;
-      line-height: 1.05;
+      font-size: clamp(1.5rem, 2.3vw, 1.9rem);
+      line-height: 1.38;
     }
 
-    .about-copy .lead {
-      margin-top: 26px;
-      color: var(--text);
-      font-family: var(--serif);
-      font-size: clamp(1.35rem, 2.1vw, 1.72rem);
-      line-height: 1.35;
-    }
-
-    .about-copy > p:not(.lead) {
+    .about-content > p:not(.lead) {
       margin-top: 20px;
-      color: var(--muted);
+      color: var(--body);
     }
 
-    .about-points {
+    .about-features {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-top: 36px;
+      gap: 4px;
+      margin-top: 35px;
     }
 
-    .about-point {
-      border: 1px solid rgba(13, 25, 22, 0.08);
-      border-radius: var(--radius-sm);
-      padding: 22px 18px;
-      background: rgba(255, 253, 248, 0.66);
-      transition:
-        transform 0.35s ease,
-        border-color 0.35s ease;
+    .about-feature {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      gap: 17px;
+      border-top: 1px solid rgba(18, 39, 36, 0.09);
+      padding: 20px 0;
     }
 
-    .about-point:hover {
-      border-color: var(--line);
-      transform: translateY(-4px);
+    .about-feature-icon {
+      display: grid;
+      width: 45px;
+      height: 45px;
+      place-items: center;
+      border: 1px solid rgba(195, 161, 108, 0.26);
+      border-radius: 50%;
+      color: #98784b;
     }
 
-    .about-point svg {
-      width: 24px;
-      height: 24px;
-      margin-bottom: 16px;
-      color: var(--gold-dark);
+    .about-feature-icon svg {
+      width: 20px;
+      height: 20px;
     }
 
-    .about-point h3 {
-      margin-bottom: 7px;
-      font-size: 1.3rem;
+    .about-feature h3 {
+      color: var(--ocean);
+      font-size: 1.4rem;
+      line-height: 1.15;
     }
 
-    .about-point p {
-      color: var(--muted);
-      font-size: 0.78rem;
-      line-height: 1.6;
+    .about-feature p {
+      margin-top: 5px;
+      color: var(--soft);
+      font-size: 0.77rem;
     }
 
     /* =========================================================
@@ -792,7 +955,7 @@
 
     .experience {
       overflow: hidden;
-      background: var(--deep);
+      background: var(--ocean);
       color: white;
     }
 
@@ -800,79 +963,91 @@
       content: "";
       position: absolute;
       top: -180px;
-      right: -180px;
-      width: 500px;
-      height: 500px;
+      left: -170px;
+      width: 520px;
+      height: 520px;
       border-radius: 50%;
-      background: rgba(200, 166, 107, 0.08);
-      filter: blur(80px);
+      background: rgba(101, 147, 134, 0.13);
+      filter: blur(90px);
+    }
+
+    .experience::after {
+      content: "";
+      position: absolute;
+      right: -200px;
+      bottom: -260px;
+      width: 620px;
+      height: 620px;
+      border-radius: 50%;
+      background: rgba(195, 161, 108, 0.07);
+      filter: blur(100px);
     }
 
     .experience h2 {
-      color: var(--white);
+      color: white;
     }
 
-    .experience .section-intro {
-      color: rgba(255, 255, 255, 0.57);
+    .experience .section-copy {
+      color: rgba(255, 255, 255, 0.55);
     }
 
-    .experience-grid {
+    .experience-list {
+      position: relative;
+      z-index: 2;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      margin-top: clamp(52px, 7vw, 88px);
-      border-top: 1px solid var(--dark-line);
-      border-bottom: 1px solid var(--dark-line);
+      margin-top: clamp(55px, 7vw, 88px);
+      border-top: 1px solid var(--white-line);
+      border-bottom: 1px solid var(--white-line);
     }
 
-    .experience-card {
-      position: relative;
-      min-height: 370px;
-      overflow: hidden;
-      border-right: 1px solid var(--dark-line);
-      padding: 34px 28px;
-      transition: background 0.4s ease;
+    .experience-item {
+      min-height: 390px;
+      border-right: 1px solid var(--white-line);
+      padding: 32px 28px;
+      transition: background 0.45s ease;
     }
 
-    .experience-card:last-child {
+    .experience-item:last-child {
       border-right: 0;
     }
 
-    .experience-card:hover {
+    .experience-item:hover {
       background: rgba(255, 255, 255, 0.035);
     }
 
-    .experience-number {
-      color: var(--gold);
+    .experience-index {
+      color: var(--gold-light);
       font-family: var(--serif);
       font-size: 1.15rem;
     }
 
-    .experience-icon {
+    .experience-symbol {
       display: grid;
-      width: 58px;
-      height: 58px;
-      margin: 58px 0 25px;
+      width: 59px;
+      height: 59px;
+      margin: 63px 0 27px;
       place-items: center;
-      border: 1px solid rgba(226, 197, 143, 0.28);
+      border: 1px solid rgba(227, 201, 148, 0.27);
       border-radius: 50%;
       color: var(--gold-light);
     }
 
-    .experience-icon svg {
-      width: 25px;
-      height: 25px;
+    .experience-symbol svg {
+      width: 24px;
+      height: 24px;
     }
 
-    .experience-card h3 {
-      color: var(--white);
+    .experience-item h3 {
+      color: white;
       font-size: 2rem;
+      line-height: 1;
     }
 
-    .experience-card p {
-      margin-top: 13px;
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 0.83rem;
-      line-height: 1.75;
+    .experience-item p {
+      margin-top: 14px;
+      color: rgba(255, 255, 255, 0.47);
+      font-size: 0.8rem;
     }
 
     /* =========================================================
@@ -880,38 +1055,54 @@
        ========================================================= */
 
     .services {
+      overflow: hidden;
       background:
-        linear-gradient(180deg, #f7f2e9 0%, #eee6d9 100%);
+        linear-gradient(
+          180deg,
+          #fbf7f0 0%,
+          #f3ebdf 100%
+        );
     }
 
-    .services-top {
+    .services::before {
+      content: "";
+      position: absolute;
+      top: 12%;
+      left: -220px;
+      width: 450px;
+      height: 450px;
+      border: 1px solid rgba(195, 161, 108, 0.13);
+      border-radius: 50%;
+    }
+
+    .services-head {
       display: flex;
-      align-items: flex-end;
+      align-items: end;
       justify-content: space-between;
-      gap: 30px;
+      gap: 50px;
     }
 
-    .services-note {
-      max-width: 320px;
+    .services-head-note {
+      max-width: 330px;
       border-left: 1px solid var(--gold);
       padding-left: 20px;
-      color: var(--muted);
-      font-size: 0.82rem;
+      color: var(--soft);
+      font-size: 0.77rem;
     }
 
-    .service-list {
+    .service-stack {
       display: grid;
-      gap: 44px;
-      margin-top: clamp(48px, 7vw, 80px);
+      gap: 52px;
+      margin-top: clamp(54px, 8vw, 92px);
     }
 
     .service-card {
       display: grid;
-      grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+      grid-template-columns: minmax(0, 1.03fr) minmax(0, 0.97fr);
       overflow: hidden;
-      border: 1px solid rgba(13, 25, 22, 0.08);
-      border-radius: var(--radius);
-      background: var(--white);
+      border: 1px solid rgba(18, 39, 36, 0.08);
+      border-radius: 38px;
+      background: rgba(255, 252, 246, 0.96);
       box-shadow: var(--shadow);
     }
 
@@ -921,12 +1112,25 @@
 
     .service-media {
       position: relative;
-      min-height: 610px;
+      min-height: 650px;
       overflow: hidden;
-      background: #b5a896;
+      background: #c9bbaa;
     }
 
-    .service-carousel,
+    .service-media::before {
+      content: "";
+      position: absolute;
+      z-index: 4;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(
+          0deg,
+          rgba(9, 22, 19, 0.42) 0%,
+          transparent 40%
+        );
+    }
+
     .service-slides,
     .service-slide {
       position: absolute;
@@ -935,7 +1139,7 @@
 
     .service-slide {
       opacity: 0;
-      transition: opacity 1s ease;
+      transition: opacity 1.15s ease;
     }
 
     .service-slide.active {
@@ -946,23 +1150,32 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transform: scale(1.015);
     }
 
-    .service-media::after {
-      content: "";
+    .service-badge {
       position: absolute;
-      z-index: 2;
-      inset: 0;
-      pointer-events: none;
-      background: linear-gradient(0deg, rgba(7, 14, 12, 0.32), transparent 45%);
+      z-index: 6;
+      top: 25px;
+      left: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      padding: 9px 13px;
+      background: rgba(9, 22, 19, 0.37);
+      color: white;
+      font-size: 0.63rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      backdrop-filter: blur(10px);
     }
 
-    .carousel-controls {
+    .carousel-bottom {
       position: absolute;
-      z-index: 4;
-      right: 22px;
-      bottom: 22px;
-      left: 22px;
+      z-index: 7;
+      right: 24px;
+      bottom: 23px;
+      left: 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -973,29 +1186,27 @@
       gap: 8px;
     }
 
-    .carousel-btn {
+    .carousel-button {
       display: grid;
       width: 44px;
       height: 44px;
       place-items: center;
-      border: 1px solid rgba(255, 255, 255, 0.34);
+      border: 1px solid rgba(255, 255, 255, 0.29);
       border-radius: 50%;
-      background: rgba(8, 17, 14, 0.48);
+      background: rgba(8, 21, 17, 0.45);
       color: white;
-      backdrop-filter: blur(9px);
-      transition:
-        background 0.3s ease,
-        border-color 0.3s ease;
+      backdrop-filter: blur(10px);
+      transition: 0.3s ease;
     }
 
-    .carousel-btn:hover {
+    .carousel-button:hover {
       border-color: var(--gold-light);
-      background: rgba(8, 17, 14, 0.72);
+      background: rgba(8, 21, 17, 0.7);
     }
 
-    .carousel-btn svg {
-      width: 17px;
-      height: 17px;
+    .carousel-button svg {
+      width: 16px;
+      height: 16px;
     }
 
     .carousel-dots {
@@ -1008,138 +1219,189 @@
       height: 7px;
       border: 0;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.5);
-      transition:
-        width 0.3s ease,
-        background 0.3s ease;
+      background: rgba(255, 255, 255, 0.47);
+      transition: 0.3s ease;
     }
 
     .carousel-dot.active {
-      width: 24px;
+      width: 25px;
       background: var(--gold-light);
     }
 
     .service-content {
       display: flex;
-      padding: clamp(36px, 5vw, 64px);
+      padding: clamp(38px, 5vw, 68px);
       flex-direction: column;
       justify-content: center;
     }
 
-    .service-index {
-      margin-bottom: 22px;
-      color: var(--gold-dark);
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
+    .service-number {
+      margin-bottom: 20px;
+      color: #99784a;
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.17em;
       text-transform: uppercase;
     }
 
     .service-content h3 {
-      color: var(--deep);
-      font-size: clamp(2.7rem, 5vw, 4.3rem);
-      letter-spacing: -0.035em;
+      color: var(--ocean);
+      font-size: clamp(3rem, 5vw, 4.7rem);
+      font-weight: 400;
+      letter-spacing: -0.04em;
+      line-height: 0.94;
+    }
+
+    .service-content h3 em {
+      display: block;
+      color: #a1845d;
+      font-weight: 400;
     }
 
     .service-description {
-      margin-top: 20px;
-      color: var(--muted);
-      font-size: 0.98rem;
+      margin-top: 23px;
+      color: var(--body);
+      font-size: 0.93rem;
     }
 
-    .service-benefits {
+    .service-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 24px;
+      margin-top: 23px;
     }
 
-    .benefit-tag {
-      border: 1px solid rgba(13, 25, 22, 0.1);
+    .service-tag {
+      border: 1px solid rgba(18, 39, 36, 0.09);
       border-radius: 999px;
       padding: 7px 12px;
-      background: #f8f4ed;
-      color: #53605a;
-      font-size: 0.67rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
+      background: #f7f2e9;
+      color: #63726b;
+      font-size: 0.63rem;
+      font-weight: 500;
     }
 
-    .price-heading {
+    .price-title {
       display: flex;
       align-items: center;
       gap: 15px;
       margin-top: 34px;
-      color: var(--deep);
+      color: var(--ocean);
       font-family: var(--serif);
-      font-size: 1.22rem;
+      font-size: 1.25rem;
     }
 
-    .price-heading::after {
+    .price-title::after {
       content: "";
       height: 1px;
       flex: 1;
-      background: rgba(13, 25, 22, 0.1);
+      background: rgba(18, 39, 36, 0.1);
     }
 
     .price-list {
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     .price-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
-      border-bottom: 1px solid rgba(13, 25, 22, 0.08);
+      gap: 25px;
+      border-bottom: 1px solid rgba(18, 39, 36, 0.08);
       padding: 12px 0;
     }
 
-    .price-row span:first-child {
-      color: var(--muted);
-      font-size: 0.88rem;
+    .price-row span {
+      color: var(--soft);
+      font-size: 0.83rem;
     }
 
     .price-row strong {
-      color: var(--deep);
+      color: var(--ocean);
       font-family: var(--serif);
-      font-size: 1.46rem;
-      font-weight: 600;
+      font-size: 1.5rem;
+      font-weight: 500;
     }
 
-    .service-fineprint {
+    .fineprint {
       margin-top: 18px;
-      color: #7c7367;
-      font-size: 0.72rem;
+      color: #8a7b6b;
+      font-size: 0.68rem;
       line-height: 1.6;
     }
 
-    .service-action {
+    .service-cta {
       margin-top: 27px;
     }
 
     /* =========================================================
-       ATMOSPHERE GALLERY
+       VISUAL BREATHING SPACE
+       ========================================================= */
+
+    .poetry {
+      overflow: hidden;
+      background: var(--ivory);
+      text-align: center;
+    }
+
+    .poetry-inner {
+      position: relative;
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    .poetry-icon {
+      display: grid;
+      width: 78px;
+      height: 78px;
+      margin: 0 auto 26px;
+      place-items: center;
+      border: 1px solid rgba(195, 161, 108, 0.26);
+      border-radius: 50%;
+      color: #a18156;
+    }
+
+    .poetry-icon svg {
+      width: 33px;
+      height: 33px;
+    }
+
+    .poetry blockquote {
+      color: var(--ocean);
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 5vw, 4.6rem);
+      font-style: italic;
+      line-height: 1;
+    }
+
+    .poetry p {
+      max-width: 520px;
+      margin: 27px auto 0;
+      color: var(--soft);
+      font-size: 0.83rem;
+    }
+
+    /* =========================================================
+       GALLERY
        ========================================================= */
 
     .gallery {
-      overflow: hidden;
-      background: var(--ivory);
+      background: var(--mist);
     }
 
     .gallery-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr 0.85fr;
-      grid-template-rows: 260px 260px;
+      grid-template-rows: 275px 275px;
       gap: 14px;
-      margin-top: 56px;
+      margin-top: 58px;
     }
 
     .gallery-item {
       position: relative;
       overflow: hidden;
-      border-radius: 20px;
-      background: #b9aa96;
+      border-radius: 25px;
+      background: var(--warm);
     }
 
     .gallery-item:first-child {
@@ -1154,91 +1416,114 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .gallery-item:hover img {
-      transform: scale(1.045);
+      transform: scale(1.055);
     }
 
     .gallery-item::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(0deg, rgba(7, 15, 12, 0.25), transparent 55%);
-      pointer-events: none;
+      background:
+        linear-gradient(
+          0deg,
+          rgba(9, 23, 19, 0.39),
+          transparent 50%
+        );
     }
 
     .gallery-caption {
       position: absolute;
-      z-index: 2;
+      z-index: 3;
       right: 18px;
-      bottom: 16px;
+      bottom: 17px;
       left: 18px;
-      color: rgba(255, 255, 255, 0.88);
-      font-size: 0.67rem;
-      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
     /* =========================================================
-       RITUAL / PARALLAX
+       RESTFUL FEATURE
        ========================================================= */
 
-    .ritual {
-      min-height: 620px;
+    .restful {
+      position: relative;
       display: grid;
+      min-height: 680px;
       align-items: center;
+      overflow: hidden;
       background:
-        linear-gradient(90deg, rgba(6, 15, 12, 0.89), rgba(6, 15, 12, 0.48)),
+        linear-gradient(
+          90deg,
+          rgba(9, 25, 21, 0.9),
+          rgba(9, 25, 21, 0.48)
+        ),
         url("https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-3.jpg")
-        center / cover fixed;
+        center / cover no-repeat;
       color: white;
     }
 
-    .ritual-card {
-      max-width: 610px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 26px;
-      padding: clamp(34px, 6vw, 64px);
-      background: rgba(10, 21, 17, 0.59);
+    .restful::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(
+          circle at 75% 45%,
+          rgba(227, 201, 148, 0.09),
+          transparent 26%
+        );
+    }
+
+    .restful-card {
+      position: relative;
+      z-index: 3;
+      max-width: 620px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 34px;
+      padding: clamp(35px, 6vw, 65px);
+      background: rgba(10, 29, 24, 0.57);
       box-shadow: var(--shadow-dark);
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(16px);
     }
 
-    .ritual-card h2 {
-      color: var(--white);
+    .restful-card h2 {
+      color: white;
     }
 
-    .ritual-card p {
-      margin-top: 22px;
-      color: rgba(255, 255, 255, 0.68);
+    .restful-card > p {
+      margin-top: 24px;
+      color: rgba(255, 255, 255, 0.62);
     }
 
-    .ritual-list {
+    .restful-steps {
       display: grid;
       gap: 14px;
-      margin-top: 30px;
+      margin-top: 31px;
     }
 
-    .ritual-list div {
-      display: flex;
-      align-items: flex-start;
-      gap: 13px;
-      color: rgba(255, 255, 255, 0.75);
-      font-size: 0.83rem;
-    }
-
-    .ritual-list span {
+    .restful-step {
       display: grid;
-      width: 24px;
-      height: 24px;
-      flex: 0 0 24px;
+      grid-template-columns: 28px 1fr;
+      gap: 13px;
+      color: rgba(255, 255, 255, 0.69);
+      font-size: 0.8rem;
+    }
+
+    .restful-step span {
+      display: grid;
+      width: 27px;
+      height: 27px;
       place-items: center;
-      border: 1px solid rgba(226, 197, 143, 0.35);
+      border: 1px solid rgba(227, 201, 148, 0.27);
       border-radius: 50%;
       color: var(--gold-light);
-      font-size: 0.67rem;
+      font-family: var(--serif);
     }
 
     /* =========================================================
@@ -1247,73 +1532,88 @@
 
     .reviews {
       overflow: hidden;
-      background: #efe6d8;
+      background:
+        linear-gradient(
+          180deg,
+          #eee5d8,
+          #f4ede3
+        );
     }
 
-    .marquee-stack {
+    .marquee-wrap {
       display: grid;
       gap: 16px;
-      margin-top: 60px;
+      margin-top: 64px;
     }
 
-    .marquee {
+    .marquee-row {
       display: flex;
       width: max-content;
       gap: 16px;
-      animation: marquee-left 48s linear infinite;
+      animation: scrollLeft 54s linear infinite;
     }
 
-    .marquee.reverse {
-      animation-name: marquee-right;
+    .marquee-row.reverse {
       transform: translateX(-50%);
+      animation-name: scrollRight;
     }
 
-    .marquee:hover {
+    .marquee-row:hover {
       animation-play-state: paused;
     }
 
-    .review-card {
-      width: min(390px, 84vw);
-      min-height: 205px;
+    .review {
+      width: min(385px, 84vw);
+      min-height: 215px;
       flex: 0 0 auto;
-      border: 1px solid rgba(13, 25, 22, 0.08);
-      border-radius: 22px;
+      border: 1px solid rgba(18, 39, 36, 0.07);
+      border-radius: 25px;
       padding: 27px;
-      background: rgba(255, 253, 248, 0.82);
-      box-shadow: 0 15px 36px rgba(13, 25, 22, 0.06);
+      background: rgba(255, 253, 249, 0.78);
+      box-shadow: 0 15px 40px rgba(26, 47, 41, 0.06);
+      backdrop-filter: blur(10px);
     }
 
     .stars {
-      margin-bottom: 16px;
-      color: var(--gold-dark);
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
+      margin-bottom: 15px;
+      color: #a88451;
+      font-size: 0.7rem;
+      letter-spacing: 0.13em;
     }
 
-    .review-card blockquote {
-      color: #45504b;
+    .review blockquote {
+      color: #46564f;
       font-family: var(--serif);
-      font-size: 1.22rem;
+      font-size: 1.28rem;
       line-height: 1.4;
     }
 
-    .review-meta {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 0.66rem;
-      font-weight: 700;
-      letter-spacing: 0.13em;
+    .review span {
+      display: block;
+      margin-top: 19px;
+      color: var(--soft);
+      font-size: 0.61rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
     }
 
-    @keyframes marquee-left {
-      from { transform: translateX(0); }
-      to { transform: translateX(calc(-50% - 8px)); }
+    @keyframes scrollLeft {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(calc(-50% - 8px));
+      }
     }
 
-    @keyframes marquee-right {
-      from { transform: translateX(calc(-50% - 8px)); }
-      to { transform: translateX(0); }
+    @keyframes scrollRight {
+      from {
+        transform: translateX(calc(-50% - 8px));
+      }
+      to {
+        transform: translateX(0);
+      }
     }
 
     /* =========================================================
@@ -1322,29 +1622,29 @@
 
     .booking {
       overflow: hidden;
-      background: var(--deep);
+      background: var(--ocean);
       color: white;
     }
 
     .booking::before {
       content: "";
       position: absolute;
-      left: -190px;
-      bottom: -240px;
-      width: 520px;
-      height: 520px;
+      top: -160px;
+      right: -170px;
+      width: 540px;
+      height: 540px;
       border-radius: 50%;
-      background: rgba(200, 166, 107, 0.09);
-      filter: blur(90px);
+      background: rgba(87, 136, 123, 0.12);
+      filter: blur(100px);
     }
 
     .booking-grid {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       display: grid;
-      grid-template-columns: 0.75fr 1.25fr;
+      grid-template-columns: 0.78fr 1.22fr;
       align-items: start;
-      gap: clamp(42px, 8vw, 100px);
+      gap: clamp(45px, 8vw, 100px);
     }
 
     .booking h2 {
@@ -1352,58 +1652,60 @@
     }
 
     .booking-copy > p {
-      margin-top: 24px;
-      color: rgba(255, 255, 255, 0.58);
+      margin-top: 25px;
+      color: rgba(255, 255, 255, 0.53);
     }
 
-    .booking-info {
+    .booking-details {
       display: grid;
-      gap: 12px;
+      gap: 0;
       margin-top: 34px;
     }
 
-    .booking-info-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      border-top: 1px solid var(--dark-line);
-      padding-top: 17px;
+    .booking-detail {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 13px;
+      border-top: 1px solid var(--white-line);
+      padding: 18px 0;
     }
 
-    .booking-info-item svg {
-      width: 20px;
-      height: 20px;
-      flex: 0 0 auto;
+    .booking-detail svg {
+      width: 19px;
+      height: 19px;
+      margin-top: 3px;
       color: var(--gold-light);
     }
 
-    .booking-info-item span {
-      color: rgba(255, 255, 255, 0.66);
-      font-size: 0.82rem;
-    }
-
-    .booking-info-item strong {
+    .booking-detail strong {
       display: block;
       margin-bottom: 3px;
       color: white;
-      font-size: 0.73rem;
-      letter-spacing: 0.07em;
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
-    .booking-form-wrap {
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 28px;
-      padding: clamp(28px, 5vw, 48px);
-      background: rgba(255, 255, 255, 0.045);
-      box-shadow: var(--shadow-dark);
-      backdrop-filter: blur(12px);
+    .booking-detail span {
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 0.8rem;
     }
 
-    .booking-form-title {
+    .booking-form-card {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 35px;
+      padding: clamp(28px, 5vw, 50px);
+      background: rgba(255, 255, 255, 0.045);
+      box-shadow: var(--shadow-dark);
+      backdrop-filter: blur(16px);
+    }
+
+    .booking-form-card h3 {
       margin-bottom: 28px;
       color: white;
-      font-size: 2rem;
+      font-size: 2.2rem;
+      font-weight: 400;
     }
 
     .form-grid {
@@ -1419,10 +1721,10 @@
     .field label {
       display: block;
       margin-bottom: 8px;
-      color: rgba(255, 255, 255, 0.58);
-      font-size: 0.67rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.51);
+      font-size: 0.61rem;
+      font-weight: 600;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
     }
 
@@ -1430,11 +1732,10 @@
     .field select,
     .field textarea {
       width: 100%;
-      border: 1px solid rgba(255, 255, 255, 0.13);
-      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
       outline: none;
-      padding: 14px 15px;
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.055);
       color: white;
       transition:
         border-color 0.3s ease,
@@ -1443,17 +1744,19 @@
 
     .field input,
     .field select {
-      min-height: 51px;
+      min-height: 52px;
+      padding: 0 15px;
     }
 
     .field textarea {
-      min-height: 115px;
+      min-height: 116px;
+      padding: 14px 15px;
       resize: vertical;
     }
 
     .field input::placeholder,
     .field textarea::placeholder {
-      color: rgba(255, 255, 255, 0.28);
+      color: rgba(255, 255, 255, 0.25);
     }
 
     .field select {
@@ -1463,37 +1766,36 @@
     .field input:focus,
     .field select:focus,
     .field textarea:focus {
-      border-color: rgba(226, 197, 143, 0.64);
-      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(227, 201, 148, 0.6);
+      background: rgba(255, 255, 255, 0.075);
     }
 
     .form-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
-      margin-top: 22px;
+      gap: 22px;
+      margin-top: 23px;
     }
 
-    .form-disclaimer {
+    .form-note {
       max-width: 330px;
-      color: rgba(255, 255, 255, 0.38);
-      font-size: 0.66rem;
-      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.34);
+      font-size: 0.63rem;
     }
 
-    .form-message {
+    .form-success {
       display: none;
-      margin-top: 18px;
-      border: 1px solid rgba(226, 197, 143, 0.25);
-      border-radius: 12px;
+      margin-top: 17px;
+      border: 1px solid rgba(227, 201, 148, 0.23);
+      border-radius: 13px;
       padding: 14px 16px;
-      background: rgba(226, 197, 143, 0.07);
+      background: rgba(227, 201, 148, 0.07);
       color: var(--gold-light);
-      font-size: 0.8rem;
+      font-size: 0.78rem;
     }
 
-    .form-message.show {
+    .form-success.show {
       display: block;
     }
 
@@ -1507,59 +1809,57 @@
 
     .faq-grid {
       display: grid;
-      grid-template-columns: 0.72fr 1.28fr;
-      gap: clamp(45px, 8vw, 105px);
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: clamp(50px, 8vw, 110px);
     }
 
-    .faq-side-note {
-      margin-top: 27px;
-      color: var(--muted);
+    .faq-intro p {
+      margin-top: 24px;
+      color: var(--body);
     }
 
-    .faq-side-contact {
+    .faq-phone {
       display: inline-flex;
-      margin-top: 25px;
-      align-items: center;
-      gap: 8px;
-      color: var(--gold-dark);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+      margin-top: 24px;
+      color: #947347;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
     .faq-list {
-      border-top: 1px solid rgba(13, 25, 22, 0.12);
+      border-top: 1px solid var(--dark-line);
     }
 
     .faq-item {
-      border-bottom: 1px solid rgba(13, 25, 22, 0.12);
+      border-bottom: 1px solid var(--dark-line);
     }
 
-    .faq-question {
+    .faq-button {
       display: flex;
       width: 100%;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 25px;
       border: 0;
-      padding: 25px 0;
+      padding: 26px 0;
       background: transparent;
-      color: var(--deep);
+      color: var(--ocean);
       text-align: left;
     }
 
-    .faq-question span:first-child {
+    .faq-button > span:first-child {
       font-family: var(--serif);
-      font-size: clamp(1.28rem, 2vw, 1.62rem);
+      font-size: clamp(1.35rem, 2vw, 1.75rem);
     }
 
     .faq-plus {
       position: relative;
-      width: 31px;
-      height: 31px;
-      flex: 0 0 31px;
-      border: 1px solid rgba(13, 25, 22, 0.14);
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      border: 1px solid rgba(18, 39, 36, 0.14);
       border-radius: 50%;
     }
 
@@ -1571,7 +1871,7 @@
       left: 50%;
       width: 11px;
       height: 1px;
-      background: var(--deep);
+      background: var(--ocean);
       transform: translate(-50%, -50%);
       transition: transform 0.3s ease;
     }
@@ -1580,14 +1880,14 @@
       transform: translate(-50%, -50%) rotate(90deg);
     }
 
-    .faq-question[aria-expanded="true"] .faq-plus::after {
-      transform: translate(-50%, -50%) rotate(0);
+    .faq-button[aria-expanded="true"] .faq-plus::after {
+      transform: translate(-50%, -50%);
     }
 
     .faq-answer {
       display: grid;
       grid-template-rows: 0fr;
-      transition: grid-template-rows 0.35s ease;
+      transition: grid-template-rows 0.4s ease;
     }
 
     .faq-answer > div {
@@ -1596,9 +1896,9 @@
 
     .faq-answer p {
       max-width: 680px;
-      padding: 0 0 25px;
-      color: var(--muted);
-      font-size: 0.9rem;
+      padding: 0 0 27px;
+      color: var(--body);
+      font-size: 0.86rem;
     }
 
     .faq-item.open .faq-answer {
@@ -1610,96 +1910,99 @@
        ========================================================= */
 
     .contact {
-      background: #e9dfd0;
+      background: var(--mist);
     }
 
-    .contact-grid {
+    .contact-panel {
       display: grid;
-      grid-template-columns: 0.93fr 1.07fr;
+      grid-template-columns: 0.92fr 1.08fr;
       overflow: hidden;
-      border-radius: var(--radius);
-      background: var(--white);
+      border-radius: 38px;
+      background: var(--pearl);
       box-shadow: var(--shadow);
     }
 
     .contact-content {
-      padding: clamp(38px, 6vw, 70px);
+      padding: clamp(38px, 6vw, 72px);
     }
 
     .contact-content h2 {
-      font-size: clamp(2.8rem, 5vw, 4.6rem);
+      font-size: clamp(3rem, 5vw, 4.75rem);
     }
 
     .contact-content > p {
-      margin-top: 20px;
-      color: var(--muted);
+      margin-top: 22px;
+      color: var(--body);
     }
 
-    .contact-cards {
+    .contact-items {
       display: grid;
       gap: 12px;
       margin-top: 32px;
     }
 
-    .contact-card {
-      display: flex;
-      gap: 16px;
-      border: 1px solid rgba(13, 25, 22, 0.08);
-      border-radius: 15px;
-      padding: 17px;
-      background: #faf7f1;
+    .contact-item {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 14px;
+      border: 1px solid rgba(18, 39, 36, 0.07);
+      border-radius: 17px;
+      padding: 16px;
+      background: #f9f5ee;
     }
 
-    .contact-card-icon {
+    .contact-icon {
       display: grid;
-      width: 39px;
-      height: 39px;
-      flex: 0 0 39px;
+      width: 41px;
+      height: 41px;
       place-items: center;
       border-radius: 50%;
-      background: var(--deep);
+      background: var(--ocean);
       color: var(--gold-light);
     }
 
-    .contact-card-icon svg {
-      width: 17px;
-      height: 17px;
+    .contact-icon svg {
+      width: 18px;
+      height: 18px;
     }
 
-    .contact-card strong {
+    .contact-item strong {
       display: block;
       margin-bottom: 2px;
-      color: var(--deep);
-      font-size: 0.69rem;
-      letter-spacing: 0.08em;
+      color: var(--ocean);
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
-    .contact-card span,
-    .contact-card a {
-      color: var(--muted);
-      font-size: 0.85rem;
-      line-height: 1.5;
+    .contact-item span,
+    .contact-item a {
+      color: var(--body);
+      font-size: 0.8rem;
     }
 
     .contact-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 28px;
+      margin-top: 29px;
     }
 
-    .map-wrap {
-      min-height: 620px;
-      background: #c6bba9;
+    .map {
+      min-height: 630px;
+      background: #d0c4b3;
     }
 
-    .map-wrap iframe {
+    .map iframe {
       width: 100%;
       height: 100%;
-      min-height: 620px;
+      min-height: 630px;
       border: 0;
-      filter: saturate(0.65) sepia(0.08) contrast(0.96);
+      filter:
+        saturate(0.66)
+        sepia(0.1)
+        contrast(0.96);
     }
 
     /* =========================================================
@@ -1707,43 +2010,39 @@
        ========================================================= */
 
     .footer {
-      padding: 72px 0 30px;
-      background: #07100d;
+      padding: 75px 0 30px;
+      background: #091713;
       color: white;
     }
 
     .footer-top {
       display: grid;
       grid-template-columns: 1.3fr 0.7fr 0.7fr;
-      gap: 50px;
-      padding-bottom: 55px;
+      gap: 55px;
+      padding-bottom: 57px;
     }
 
-    .footer-brand {
-      max-width: 470px;
-    }
-
-    .footer-logo {
-      color: var(--white);
-      font-family: var(--serif);
-      font-size: 2.6rem;
+    .footer-brand h3 {
+      color: white;
+      font-size: 2.8rem;
+      font-weight: 400;
       line-height: 1;
     }
 
     .footer-brand p {
-      max-width: 390px;
-      margin-top: 18px;
-      color: rgba(255, 255, 255, 0.46);
-      font-size: 0.82rem;
+      max-width: 420px;
+      margin-top: 17px;
+      color: rgba(255, 255, 255, 0.42);
+      font-size: 0.77rem;
     }
 
-    .footer h3 {
-      margin-bottom: 17px;
+    .footer-title {
+      margin-bottom: 18px;
       color: var(--gold-light);
       font-family: var(--sans);
-      font-size: 0.67rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
+      font-size: 0.61rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
     }
 
@@ -1754,9 +2053,8 @@
 
     .footer-links a,
     .footer-links span {
-      color: rgba(255, 255, 255, 0.58);
-      font-size: 0.79rem;
-      transition: color 0.3s ease;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.76rem;
     }
 
     .footer-links a:hover {
@@ -1770,12 +2068,12 @@
       gap: 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       padding-top: 25px;
-      color: rgba(255, 255, 255, 0.35);
-      font-size: 0.68rem;
+      color: rgba(255, 255, 255, 0.29);
+      font-size: 0.63rem;
     }
 
     /* =========================================================
-       RESPONSIVE — TABLET
+       TABLET
        ========================================================= */
 
     @media (max-width: 1020px) {
@@ -1783,7 +2081,7 @@
         display: none;
       }
 
-      .menu-toggle {
+      .menu-button {
         display: grid;
       }
 
@@ -1797,9 +2095,9 @@
         height: 100svh;
         padding: 112px 32px 40px;
         flex-direction: column;
-        gap: 7px;
-        background: rgba(7, 16, 13, 0.98);
-        box-shadow: -20px 0 60px rgba(0, 0, 0, 0.25);
+        gap: 5px;
+        background: rgba(8, 22, 18, 0.98);
+        box-shadow: -20px 0 70px rgba(0, 0, 0, 0.25);
         transform: translateX(105%);
         transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
       }
@@ -1808,51 +2106,48 @@
         transform: translateX(0);
       }
 
-      .mobile-nav a:not(.btn) {
+      .mobile-nav > a:not(.btn) {
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        padding: 13px 0;
-        color: rgba(255, 255, 255, 0.78);
+        padding: 14px 0;
+        color: rgba(255, 255, 255, 0.77);
         font-family: var(--serif);
-        font-size: 1.7rem;
+        font-size: 1.75rem;
       }
 
       .mobile-nav .btn {
-        margin-top: 19px;
+        margin-top: 20px;
       }
 
-      .intro-strip-grid {
-        grid-template-columns: repeat(3, 1fr);
+      .hero-main {
+        grid-template-columns: 1fr;
       }
 
-      .strip-lead {
-        grid-column: 1 / -1;
-        border-right: 0;
-        border-bottom: 1px solid var(--dark-line);
+      .hero-card {
+        max-width: 380px;
       }
 
-      .about-grid {
+      .intro-wrap,
+      .about-grid,
+      .booking-grid,
+      .faq-grid,
+      .contact-panel {
         grid-template-columns: 1fr;
       }
 
       .about-visual {
-        min-height: 590px;
-        max-width: 670px;
-      }
-
-      .about-copy {
         max-width: 720px;
       }
 
-      .experience-grid {
+      .experience-list {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .experience-card:nth-child(2) {
+      .experience-item:nth-child(2) {
         border-right: 0;
       }
 
-      .experience-card:nth-child(-n + 2) {
-        border-bottom: 1px solid var(--dark-line);
+      .experience-item:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--white-line);
       }
 
       .service-card {
@@ -1864,22 +2159,16 @@
       }
 
       .service-media {
-        min-height: 520px;
+        min-height: 540px;
       }
 
-      .booking-grid,
-      .faq-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .map-wrap,
-      .map-wrap iframe {
+      .map,
+      .map iframe {
         min-height: 480px;
       }
 
       .footer-top {
-        grid-template-columns: 1.4fr 0.8fr;
+        grid-template-columns: 1fr 1fr;
       }
 
       .footer-brand {
@@ -1888,177 +2177,165 @@
     }
 
     /* =========================================================
-       RESPONSIVE — MOBILE
+       MOBILE
        ========================================================= */
 
     @media (max-width: 720px) {
       :root {
         --container: min(100% - 30px, 1180px);
-        --radius: 22px;
       }
 
       .section {
-        padding: 78px 0;
+        padding: 80px 0;
       }
 
-      .nav-wrap {
-        min-height: 72px;
+      .nav {
+        min-height: 73px;
       }
 
-      .brand-mark {
-        width: 35px;
-        height: 35px;
+      .brand-orbit {
+        width: 36px;
+        height: 36px;
       }
 
       .brand-name {
-        font-size: 1.18rem;
+        font-size: 1.2rem;
       }
 
-      .brand-subtitle {
+      .brand-location {
         display: none;
       }
 
       .hero-content {
         padding-top: 120px;
-        padding-bottom: 45px;
+        padding-bottom: 80px;
       }
 
       .hero h1 {
-        font-size: clamp(3.6rem, 17vw, 5rem);
+        font-size: clamp(3.8rem, 17vw, 5.3rem);
       }
 
-      .hero-copy {
-        margin-top: 22px;
+      .hero-main {
+        gap: 40px;
+      }
+
+      .hero-description {
+        margin-top: 24px;
       }
 
       .hero-actions {
         display: grid;
-        grid-template-columns: 1fr;
       }
 
       .hero-actions .btn {
         width: 100%;
       }
 
-      .hero-trust {
-        gap: 6px;
-        margin-top: 30px;
-      }
-
-      .trust-pill {
-        padding: 7px 10px;
-        font-size: 0.63rem;
-      }
-
-      .hero-side {
+      .hero-card {
         display: none;
       }
 
-      .intro-strip-grid {
+      .hero-dots {
+        display: none;
+      }
+
+      .hero-bottom {
+        margin-top: 31px;
+      }
+
+      .hero-pill {
+        font-size: 0.61rem;
+      }
+
+      .intro-wrap {
+        gap: 42px;
+      }
+
+      .intro-quote {
+        padding-left: 25px;
+      }
+
+      .intro-numbers {
         grid-template-columns: 1fr 1fr;
       }
 
-      .strip-lead {
+      .intro-numbers .number-card:last-child {
         grid-column: 1 / -1;
-      }
-
-      .strip-item {
-        min-height: 105px;
-        padding: 20px 17px;
-      }
-
-      .strip-item:nth-child(3) {
-        border-right: 0;
-      }
-
-      .strip-item:last-child {
-        grid-column: 1 / -1;
-        border-top: 1px solid var(--dark-line);
       }
 
       .about-visual {
-        min-height: 460px;
+        min-height: 485px;
       }
 
-      .about-img-main {
-        width: 85%;
+      .about-main {
+        width: 86%;
         height: 76%;
-        border-radius: 120px 120px 20px 20px;
+        border-radius: 145px 145px 21px 21px;
       }
 
-      .about-img-small {
-        width: 49%;
-        height: 38%;
+      .about-small {
+        width: 52%;
+        height: 39%;
         border-width: 6px;
       }
 
-      .about-seal {
-        right: 2%;
-        width: 105px;
-        height: 105px;
+      .about-flower {
+        width: 95px;
+        height: 95px;
       }
 
-      .about-seal span {
-        font-size: 0.91rem;
+      .about-flower svg {
+        width: 38px;
+        height: 38px;
       }
 
-      .about-points {
+      .experience-list {
         grid-template-columns: 1fr;
       }
 
-      .about-point {
-        display: grid;
-        grid-template-columns: 40px 1fr;
-        column-gap: 10px;
-      }
-
-      .about-point svg {
-        grid-row: 1 / 3;
-      }
-
-      .experience-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .experience-card,
-      .experience-card:nth-child(2) {
+      .experience-item,
+      .experience-item:nth-child(2) {
         min-height: auto;
         border-right: 0;
-        border-bottom: 1px solid var(--dark-line);
-        padding: 28px 6px;
+        border-bottom: 1px solid var(--white-line);
+        padding: 29px 5px;
       }
 
-      .experience-card:last-child {
+      .experience-item:last-child {
         border-bottom: 0;
       }
 
-      .experience-icon {
-        margin: 30px 0 19px;
+      .experience-symbol {
+        margin: 30px 0 20px;
       }
 
-      .services-top {
+      .services-head {
         display: block;
       }
 
-      .services-note {
-        margin-top: 25px;
+      .services-head-note {
+        margin-top: 26px;
+      }
+
+      .service-card {
+        border-radius: 27px;
       }
 
       .service-media {
-        min-height: 380px;
+        min-height: 410px;
       }
 
       .service-content {
-        padding: 31px 23px 35px;
+        padding: 33px 23px 38px;
       }
 
       .service-content h3 {
-        font-size: 2.7rem;
+        font-size: 3rem;
       }
 
       .gallery-grid {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 310px 210px 240px;
+        grid-template-rows: 320px 220px 250px;
       }
 
       .gallery-item:first-child {
@@ -2070,13 +2347,13 @@
         grid-column: 1 / -1;
       }
 
-      .ritual {
-        min-height: 590px;
-        background-attachment: scroll;
+      .restful {
+        min-height: 620px;
       }
 
-      .ritual-card {
-        padding: 31px 24px;
+      .restful-card {
+        border-radius: 27px;
+        padding: 32px 24px;
       }
 
       .form-grid {
@@ -2101,7 +2378,7 @@
       }
 
       .contact-content {
-        padding: 34px 24px;
+        padding: 35px 24px;
       }
 
       .contact-actions {
@@ -2112,14 +2389,14 @@
         width: 100%;
       }
 
-      .map-wrap,
-      .map-wrap iframe {
+      .map,
+      .map iframe {
         min-height: 400px;
       }
 
       .footer-top {
         grid-template-columns: 1fr 1fr;
-        gap: 38px 24px;
+        gap: 39px 24px;
       }
 
       .footer-brand {
@@ -2134,21 +2411,17 @@
 
     @media (max-width: 420px) {
       .hero h1 {
-        font-size: 3.45rem;
+        font-size: 3.65rem;
       }
 
       .gallery-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 250px);
+        grid-template-rows: repeat(4, 255px);
       }
 
       .gallery-item:first-child,
       .gallery-item:nth-child(4) {
         grid-column: auto;
-      }
-
-      .review-card {
-        width: 84vw;
       }
 
       .footer-top {
@@ -2157,10 +2430,6 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
       *,
       *::before,
       *::after {
@@ -2179,22 +2448,30 @@
 </head>
 
 <body>
+
   <!-- =======================================================
-       HEADER / NAVIGATION
+       HEADER
        ======================================================= -->
-  <header class="site-header" id="siteHeader">
-    <div class="container nav-wrap">
+  <header class="header" id="header">
+    <div class="container nav">
+
       <a href="#home" class="brand" aria-label="Ocean Massage Spa home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+        <span class="brand-orbit" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.35"
+          >
             <path d="M3 14c2.2-2.4 4.2-2.4 6 0s3.8 2.4 6 0 4.2-2.4 6 0" />
             <path d="M4 18c1.8-1.8 3.5-1.8 5.2 0s3.5 1.8 5.3 0 3.6-1.8 5.5 0" />
             <path d="M12 3c2 2.3 3 4.2 3 5.7A3 3 0 0 1 9 8.7C9 7.2 10 5.3 12 3Z" />
           </svg>
         </span>
-        <span class="brand-text">
+
+        <span>
           <span class="brand-name">Ocean Massage Spa</span>
-          <span class="brand-subtitle">London · Ontario</span>
+          <span class="brand-location">London · Ontario</span>
         </span>
       </a>
 
@@ -2206,23 +2483,24 @@
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-        <a href="#booking" class="btn btn-primary nav-book">Book Now</a>
+        <a href="#booking" class="btn btn-gold nav-book">Book Now</a>
       </nav>
 
       <button
-        class="menu-toggle"
-        id="menuToggle"
+        class="menu-button"
+        id="menuButton"
         type="button"
-        aria-label="Open navigation menu"
+        aria-label="Open menu"
         aria-expanded="false"
         aria-controls="mobileNav"
       >
-        <span class="menu-icon" aria-hidden="true">
+        <span class="hamburger" aria-hidden="true">
           <span></span>
           <span></span>
           <span></span>
         </span>
       </button>
+
     </div>
   </header>
 
@@ -2234,415 +2512,751 @@
     <a href="#reviews">Reviews</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
-    <a href="#booking" class="btn btn-primary">Book Now</a>
+    <a href="#booking" class="btn btn-gold">Book Now</a>
   </nav>
 
   <main>
+
     <!-- =====================================================
-         HOME / HERO
-         Hero imagery uses only Relaxation Massage imagery
-         and Four Hands imagery relevant to the actual services.
+         HERO
          ===================================================== -->
-    <section class="hero" id="home" aria-label="Welcome to Ocean Massage Spa">
+    <section class="hero" id="home">
+
       <div class="hero-slides" aria-hidden="true">
+
         <div
           class="hero-slide active"
-          style="background-image:url('https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-2.jpg')"
+          style="
+            background-image:
+            url('https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-2.jpg');
+          "
         ></div>
+
         <div
           class="hero-slide"
-          style="background-image:url('https://i.pinimg.com/736x/ac/a6/69/aca669d5a5fe654a32f0f6b3c5138275.jpg')"
+          style="
+            background-image:
+            url('https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg');
+          "
         ></div>
+
         <div
           class="hero-slide"
-          style="background-image:url('https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-1-1024x684.jpg')"
+          style="
+            background-image:
+            url('https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-3.jpg');
+          "
         ></div>
+
         <div
           class="hero-slide"
-          style="background-image:url('https://i.pinimg.com/1200x/dc/19/10/dc1910a382684fb1ef96f192e94b3886.jpg')"
+          style="
+            background-image:
+            url('https://i.pinimg.com/1200x/2b/81/ad/2b81ad4a2b574b076d5676db9ba13418.jpg');
+          "
         ></div>
+
       </div>
+
+      <div class="hero-overlay"></div>
+      <div class="hero-glow one"></div>
+      <div class="hero-glow two"></div>
 
       <div class="hero-content">
         <div class="container">
-          <div class="hero-inner">
-            <div class="hero-kicker">A quieter way to unwind</div>
 
-            <h1>
-              Return to a
-              <em>calmer rhythm.</em>
-            </h1>
+          <div class="hero-main">
 
-            <p class="hero-copy">
-              Step away from the pace of the day and into a quiet, private
-              massage spa designed for unhurried relaxation, thoughtful
-              comfort and restorative downtime.
-            </p>
+            <div class="hero-copy-wrap">
 
-            <div class="hero-actions">
-              <a href="#booking" class="btn btn-primary">
-                Book Now
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
-                  <path d="M5 12h14M14 7l5 5-5 5" />
-                </svg>
-              </a>
+              <div class="hero-kicker">
+                Quiet Luxury · London, Ontario
+              </div>
 
-              <a href="tel:+14164756899" class="btn btn-outline">
-                Call +1 416-475-6899
-              </a>
+              <h1>
+                Drift into
+                <em>a softer moment.</em>
+              </h1>
+
+              <p class="hero-description">
+                A peaceful massage spa created for slow breaths, quiet rooms
+                and the rare pleasure of having nowhere else you need to be.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#booking" class="btn btn-gold">
+                  Book Your Moment
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M14 7l5 5-5 5" />
+                  </svg>
+                </a>
+
+                <a
+                  href="tel:+14164756899"
+                  class="btn btn-glass"
+                >
+                  Call +1 416-475-6899
+                </a>
+              </div>
+
+              <div class="hero-bottom" aria-label="Experience highlights">
+                <span class="hero-pill">Quiet Rooms</span>
+                <span class="hero-pill">Private Atmosphere</span>
+                <span class="hero-pill">Thoughtful Comfort</span>
+                <span class="hero-pill">Open Daily</span>
+              </div>
+
             </div>
 
-            <div class="hero-trust" aria-label="Spa experience highlights">
-              <span class="trust-pill"><span class="trust-dot"></span>Quiet Atmosphere</span>
-              <span class="trust-pill"><span class="trust-dot"></span>Private Setting</span>
-              <span class="trust-pill"><span class="trust-dot"></span>Thoughtful Care</span>
-              <span class="trust-pill"><span class="trust-dot"></span>Easy Booking</span>
-            </div>
+            <aside class="hero-card" aria-label="Opening hours">
+
+              <span class="hero-card-label">
+                Your quiet escape
+              </span>
+
+              <h3>
+                A little space
+                <br />
+                to simply be.
+              </h3>
+
+              <p>
+                Relax into an atmosphere shaped around warmth,
+                privacy and unhurried time.
+              </p>
+
+              <div class="hero-card-divider"></div>
+
+              <div class="hero-card-row">
+                <span>Open</span>
+                <strong>Every Day</strong>
+              </div>
+
+              <div class="hero-card-row">
+                <span>Hours</span>
+                <strong>9 AM – 10 PM</strong>
+              </div>
+
+              <div class="hero-card-row">
+                <span>Location</span>
+                <strong>Princess Ave</strong>
+              </div>
+
+            </aside>
+
           </div>
+
         </div>
       </div>
 
-      <div class="hero-side" aria-hidden="true">
-        <div class="hero-dots">
-          <button class="hero-dot active" type="button" data-hero-dot="0" aria-label="Show hero image 1"></button>
-          <button class="hero-dot" type="button" data-hero-dot="1" aria-label="Show hero image 2"></button>
-          <button class="hero-dot" type="button" data-hero-dot="2" aria-label="Show hero image 3"></button>
-          <button class="hero-dot" type="button" data-hero-dot="3" aria-label="Show hero image 4"></button>
-        </div>
-        <span class="scroll-label">Discover</span>
+      <div class="hero-dots" aria-label="Hero image controls">
+        <button
+          class="hero-dot active"
+          type="button"
+          data-hero="0"
+          aria-label="Hero image 1"
+        ></button>
+
+        <button
+          class="hero-dot"
+          type="button"
+          data-hero="1"
+          aria-label="Hero image 2"
+        ></button>
+
+        <button
+          class="hero-dot"
+          type="button"
+          data-hero="2"
+          aria-label="Hero image 3"
+        ></button>
+
+        <button
+          class="hero-dot"
+          type="button"
+          data-hero="3"
+          aria-label="Hero image 4"
+        ></button>
       </div>
+
+      <svg
+        class="hero-wave"
+        viewBox="0 0 1440 105"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          fill="currentColor"
+          d="
+            M0,72
+            C230,20 390,108 620,64
+            C860,18 1090,84 1440,36
+            L1440,105
+            L0,105
+            Z
+          "
+        />
+      </svg>
+
     </section>
 
     <!-- =====================================================
-         QUICK INFORMATION STRIP
+         INTRO
          ===================================================== -->
-    <section class="intro-strip" aria-label="Quick information">
-      <div class="container">
-        <div class="intro-strip-grid">
-          <div class="strip-item strip-lead">
-            <p>A refined pause in the heart of London, Ontario.</p>
-          </div>
+    <section class="section intro">
 
-          <div class="strip-item">
-            <strong>2</strong>
-            <span>Massage experiences</span>
-          </div>
+      <div class="container intro-wrap">
 
-          <div class="strip-item">
-            <strong>Daily</strong>
-            <span>Open seven days a week</span>
-          </div>
-
-          <div class="strip-item">
-            <strong>9–10</strong>
-            <span>9:00 AM – 10:00 PM</span>
-          </div>
+        <div class="intro-quote reveal">
+          <p>
+            There is beauty
+            in slowing down.
+          </p>
         </div>
+
+        <div class="intro-text reveal">
+
+          <span class="eyebrow">
+            Ocean Massage Spa
+          </span>
+
+          <p>
+            Tucked into London, Ontario, Ocean Massage Spa is a place to
+            step away from everyday noise and return to a quieter rhythm.
+            The experience is centered on privacy, comfort, calm surroundings
+            and uninterrupted time for yourself.
+          </p>
+
+          <div class="intro-numbers">
+
+            <div class="number-card">
+              <strong>2</strong>
+              <span>Massage experiences</span>
+            </div>
+
+            <div class="number-card">
+              <strong>7</strong>
+              <span>Days open each week</span>
+            </div>
+
+            <div class="number-card">
+              <strong>9–10</strong>
+              <span>Daily opening hours</span>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
 
     <!-- =====================================================
          ABOUT
-         No therapist/team biographies.
          ===================================================== -->
     <section class="section about" id="about">
+
       <div class="container about-grid">
+
         <div class="about-visual reveal">
-          <figure class="about-img-main">
+
+          <figure class="about-main">
             <img
               src="https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-3.jpg"
-              alt="Quiet massage room prepared with fresh towels and warm ambient lighting"
+              alt="Warm and quiet massage room"
               loading="lazy"
             />
           </figure>
 
-          <figure class="about-img-small">
+          <figure class="about-small">
             <img
               src="https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-2.jpg"
-              alt="Warm and calm massage setting"
+              alt="Peaceful relaxation massage atmosphere"
               loading="lazy"
             />
           </figure>
 
-          <div class="about-seal" aria-hidden="true">
-            <span>Quiet moments, beautifully unhurried.</span>
+          <div class="about-flower" aria-hidden="true">
+            <svg
+              viewBox="0 0 48 48"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+            >
+              <path d="M24 24c-8-5-9-12-5-18 6 2 9 8 5 18Z"/>
+              <path d="M24 24c5-8 12-9 18-5-2 6-8 9-18 5Z"/>
+              <path d="M24 24c8 5 9 12 5 18-6-2-9-8-5-18Z"/>
+              <path d="M24 24c-5 8-12 9-18 5 2-6 8-9 18-5Z"/>
+              <circle cx="24" cy="24" r="3"/>
+            </svg>
           </div>
+
         </div>
 
-        <div class="about-copy reveal">
-          <span class="eyebrow">About Ocean</span>
-          <h2>Room to exhale.</h2>
+        <div class="about-content reveal">
+
+          <span class="eyebrow">
+            About Us
+          </span>
+
+          <h2>
+            Quiet by
+            <span class="italic">design.</span>
+          </h2>
 
           <p class="lead">
-            Ocean Massage Spa is shaped around the simple pleasure of slowing
-            down in a comfortable, peaceful and private setting.
+            Sometimes the most luxurious thing is simply having
+            a peaceful place where the outside world can fade away.
           </p>
 
           <p>
-            From the moment you arrive, the experience is intended to feel
-            uncomplicated and calm. Warm surroundings, a quieter pace and
-            thoughtfully prepared treatment spaces create room to switch off
-            from everyday demands and enjoy uninterrupted time for yourself.
+            Ocean Massage Spa is designed around that feeling. A warm,
+            private environment, thoughtfully prepared spaces and an
+            unhurried atmosphere make it easier to settle in and enjoy
+            your time without distraction.
           </p>
 
           <p>
-            The focus is on relaxation, personal comfort, cleanliness and a
-            welcoming atmosphere — without unnecessary distractions.
+            Cleanliness, comfort, personal privacy and simplicity remain
+            at the heart of the experience from arrival through departure.
           </p>
 
-          <div class="about-points">
-            <article class="about-point">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M5 19h14M7 16h10M8 16V9a4 4 0 0 1 8 0v7M10 9h4" />
-              </svg>
-              <h3>Quiet Rooms</h3>
-              <p>A calmer environment designed for unhurried downtime.</p>
-            </article>
+          <div class="about-features">
 
-            <article class="about-point">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M12 3 5 6v5c0 4.7 2.7 8.2 7 10 4.3-1.8 7-5.3 7-10V6l-7-3Z" />
-                <path d="m9 12 2 2 4-5" />
-              </svg>
-              <h3>Privacy</h3>
-              <p>Personal space and comfort remain central to each visit.</p>
-            </article>
+            <div class="about-feature">
 
-            <article class="about-point">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M12 3c-2 3-5 5.6-5 9a5 5 0 0 0 10 0c0-3.4-3-6-5-9Z" />
-                <path d="M9.5 14.5c.7 1 1.5 1.5 2.5 1.5" />
-              </svg>
-              <h3>Mindful Detail</h3>
-              <p>A warm, uncluttered atmosphere that lets the day fall away.</p>
-            </article>
+              <span class="about-feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                >
+                  <path d="M4 17c3-5 5-8 8-12 3 4 5 7 8 12" />
+                  <path d="M6 17h12" />
+                </svg>
+              </span>
+
+              <div>
+                <h3>Soft, Restful Atmosphere</h3>
+                <p>
+                  Warm surroundings designed to help the pace
+                  of the day gently fall away.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="about-feature">
+
+              <span class="about-feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                >
+                  <path d="M12 3 5 6v5c0 4.7 2.7 8.2 7 10 4.3-1.8 7-5.3 7-10V6l-7-3Z" />
+                  <path d="m9 12 2 2 4-5" />
+                </svg>
+              </span>
+
+              <div>
+                <h3>Private &amp; Unhurried</h3>
+                <p>
+                  Personal space and comfort remain central
+                  throughout the visit.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="about-feature">
+
+              <span class="about-feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                >
+                  <path d="M12 3c-2 3-5 5.6-5 9a5 5 0 0 0 10 0c0-3.4-3-6-5-9Z" />
+                </svg>
+              </span>
+
+              <div>
+                <h3>Thoughtful Details</h3>
+                <p>
+                  An uncluttered experience shaped around
+                  cleanliness, calm and ease.
+                </p>
+              </div>
+
+            </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
     <!-- =====================================================
-         LUXURY EXPERIENCE
+         EXPERIENCE
          ===================================================== -->
     <section class="section experience" id="experience">
+
       <div class="container">
-        <div class="section-heading center reveal">
-          <span class="eyebrow light">The Ocean Experience</span>
-          <h2>Ease, from arrival to finish.</h2>
-          <p class="section-intro">
-            A thoughtful visit is about more than the time on the table.
-            Every stage is designed around comfort, privacy and the freedom
-            to slow down.
+
+        <div class="center-heading reveal">
+
+          <span class="eyebrow light center">
+            The Ocean Experience
+          </span>
+
+          <h2>
+            From arrival to
+            <span class="italic">exhale.</span>
+          </h2>
+
+          <p class="section-copy">
+            Small details create a softer experience —
+            a calm welcome, a private setting and a little room
+            on either side of your appointment to simply slow down.
           </p>
+
         </div>
 
-        <div class="experience-grid">
-          <article class="experience-card reveal">
-            <span class="experience-number">01</span>
-            <div class="experience-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
-                <path d="M4 17c3-5 5-8 8-12 3 4 5 7 8 12" />
-                <path d="M6 17h12M8 20h8" />
+        <div class="experience-list">
+
+          <article class="experience-item reveal">
+            <span class="experience-index">01</span>
+
+            <div class="experience-symbol">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+              >
+                <path d="M4 16c3-4 5-7 8-11 3 4 5 7 8 11" />
+                <path d="M6 19h12" />
               </svg>
             </div>
+
             <h3>Calm Arrival</h3>
+
             <p>
-              Settle in, leave the outside pace behind and give yourself a
-              little time to transition into a quieter state.
+              Arrive with a little breathing room and let
+              your attention move away from the day outside.
             </p>
           </article>
 
-          <article class="experience-card reveal">
-            <span class="experience-number">02</span>
-            <div class="experience-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <article class="experience-item reveal">
+            <span class="experience-index">02</span>
+
+            <div class="experience-symbol">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+              >
                 <rect x="4" y="5" width="16" height="14" rx="2" />
-                <path d="M8 19v2M16 19v2M7 12h10" />
+                <path d="M7 12h10" />
               </svg>
             </div>
+
             <h3>Private Space</h3>
+
             <p>
-              Enjoy a treatment setting centered on discretion, personal
-              comfort and uninterrupted relaxation.
+              A quieter environment gives you space
+              to settle in comfortably without unnecessary distraction.
             </p>
           </article>
 
-          <article class="experience-card reveal">
-            <span class="experience-number">03</span>
-            <div class="experience-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <article class="experience-item reveal">
+            <span class="experience-index">03</span>
+
+            <div class="experience-symbol">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+              >
                 <path d="M12 21c-4.5-3-7-6.2-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 3.8-2.5 7-7 10Z" />
               </svg>
             </div>
-            <h3>Mindful Details</h3>
+
+            <h3>Mindful Detail</h3>
+
             <p>
-              A clean, warm atmosphere and uncluttered surroundings support a
-              more comfortable, easygoing visit.
+              A clean, warm setting and thoughtful simplicity
+              create a more comfortable atmosphere.
             </p>
           </article>
 
-          <article class="experience-card reveal">
-            <span class="experience-number">04</span>
-            <div class="experience-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <article class="experience-item reveal">
+            <span class="experience-index">04</span>
+
+            <div class="experience-symbol">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+              >
                 <path d="M4 15c2.4 0 3.6 3 6 3s3.6-3 6-3 3.6 3 4 3" />
                 <path d="M6 10c2 0 3 2 5 2s3-2 5-2" />
-                <path d="M12 3v4" />
               </svg>
             </div>
+
             <h3>Restful Finish</h3>
+
             <p>
-              Let the experience end without rush, giving yourself a moment
-              before returning to the rest of your day.
+              Let the experience end gently, giving yourself
+              a moment before stepping back into the day.
             </p>
           </article>
+
         </div>
+
       </div>
+
     </section>
 
     <!-- =====================================================
-         SERVICES & PRICING
-         STRICTLY ONLY:
+         SERVICES
+         Only real services supplied by the store:
          1. Relaxation Massage
          2. Four Hands Massage
          ===================================================== -->
     <section class="section services" id="services">
+
       <div class="container">
-        <div class="services-top reveal">
+
+        <div class="services-head reveal">
+
           <div>
-            <span class="eyebrow">Services &amp; Pricing</span>
-            <h2>Choose your moment.</h2>
-            <p class="section-intro">
-              Two distinct massage experiences, each offered in clearly
-              defined session lengths so you can choose the pace that suits
-              your day.
+            <span class="eyebrow">
+              Services &amp; Pricing
+            </span>
+
+            <h2>
+              Choose the pace
+              <br />
+              that feels
+              <span class="italic">right.</span>
+            </h2>
+
+            <p class="section-copy">
+              Two massage experiences, thoughtfully presented
+              with clear timing and pricing.
             </p>
           </div>
 
-          <p class="services-note">
-            Gratuity is not included in listed prices. For Four Hands Massage,
-            please consider gratuity separately for each of the two massage
-            practitioners.
+          <p class="services-head-note">
+            Gratuity is not included in listed prices.
+            For Four Hands Massage, gratuity should be considered
+            separately for each of the two massage practitioners.
           </p>
+
         </div>
 
-        <div class="service-list">
-          <!-- RELAXATION MASSAGE -->
+        <div class="service-stack">
+
+          <!-- =========================
+               RELAXATION MASSAGE
+               ========================= -->
           <article class="service-card reveal">
+
             <div class="service-media">
+
+              <span class="service-badge">
+                Relax · Unwind · Reset
+              </span>
+
               <div
-                class="service-carousel"
                 data-carousel
-                data-interval="5200"
-                aria-label="Relaxation Massage image gallery"
+                data-delay="5200"
+                aria-label="Relaxation Massage gallery"
               >
+
                 <div class="service-slides">
+
                   <figure class="service-slide active">
                     <img
                       src="https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-1-1024x684.jpg"
-                      alt="Relaxation massage in a calm spa setting"
+                      alt="Relaxation massage in a calm spa environment"
                       loading="lazy"
                     />
                   </figure>
+
                   <figure class="service-slide">
                     <img
                       src="https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-2.jpg"
-                      alt="Relaxing massage atmosphere with warm spa details"
+                      alt="Warm relaxation massage setting"
                       loading="lazy"
                     />
                   </figure>
+
                   <figure class="service-slide">
                     <img
                       src="https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-3.jpg"
-                      alt="Peaceful relaxation massage room"
+                      alt="Quiet relaxation massage room"
                       loading="lazy"
                     />
                   </figure>
+
                 </div>
 
-                <div class="carousel-controls">
+                <div class="carousel-bottom">
+
                   <div class="carousel-arrows">
-                    <button class="carousel-btn prev" type="button" aria-label="Previous Relaxation Massage image">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+
+                    <button
+                      class="carousel-button carousel-prev"
+                      type="button"
+                      aria-label="Previous Relaxation Massage image"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                      >
                         <path d="m15 6-6 6 6 6" />
                       </svg>
                     </button>
-                    <button class="carousel-btn next" type="button" aria-label="Next Relaxation Massage image">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+
+                    <button
+                      class="carousel-button carousel-next"
+                      type="button"
+                      aria-label="Next Relaxation Massage image"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                      >
                         <path d="m9 6 6 6-6 6" />
                       </svg>
                     </button>
+
                   </div>
-                  <div class="carousel-dots" aria-label="Relaxation Massage image selection"></div>
+
+                  <div class="carousel-dots"></div>
+
                 </div>
+
               </div>
+
             </div>
 
             <div class="service-content">
-              <div class="service-index">01 · Full-body relaxation</div>
-              <h3>Relaxation Massage</h3>
+
+              <span class="service-number">
+                01 · Full-Body Relaxation
+              </span>
+
+              <h3>
+                Relaxation
+                <em>Massage</em>
+              </h3>
 
               <p class="service-description">
-                A soothing full-body massage created for the moments when
-                everyday tension has built up and you simply want to slow
-                down. Gentle, unhurried attention helps create a more restful
-                experience and leaves space to reset.
+                A soothing full-body massage for moments when the week feels
+                long and your body simply wants to slow down. The experience
+                is centered on releasing everyday tension, resting quietly
+                and taking time away from your usual pace.
               </p>
 
-              <div class="service-benefits" aria-label="Relaxation Massage highlights">
-                <span class="benefit-tag">Everyday Tension</span>
-                <span class="benefit-tag">Full-Body Fatigue</span>
-                <span class="benefit-tag">Quiet Reset</span>
-                <span class="benefit-tag">Unhurried Relaxation</span>
+              <div class="service-tags">
+                <span class="service-tag">Everyday Tension</span>
+                <span class="service-tag">Full-Body Fatigue</span>
+                <span class="service-tag">Quiet Downtime</span>
+                <span class="service-tag">Gentle Reset</span>
               </div>
 
-              <div class="price-heading">Session Pricing</div>
+              <div class="price-title">
+                Session Pricing
+              </div>
 
               <div class="price-list">
+
                 <div class="price-row">
                   <span>30 minutes</span>
                   <strong>$50</strong>
                 </div>
+
                 <div class="price-row">
                   <span>45 minutes</span>
                   <strong>$70</strong>
                 </div>
+
                 <div class="price-row">
                   <span>60 minutes</span>
                   <strong>$80</strong>
                 </div>
+
                 <div class="price-row">
                   <span>90 minutes</span>
                   <strong>$130</strong>
                 </div>
+
               </div>
 
-              <p class="service-fineprint">
+              <p class="fineprint">
                 Gratuity is not included in the listed price.
               </p>
 
-              <div class="service-action">
-                <a href="#booking" class="btn btn-dark" data-book-service="Relaxation Massage">
+              <div class="service-cta">
+                <a
+                  href="#booking"
+                  class="btn btn-dark"
+                  data-service-book="Relaxation Massage"
+                >
                   Book Relaxation Massage
                 </a>
               </div>
+
             </div>
+
           </article>
 
-          <!-- FOUR HANDS MASSAGE -->
+          <!-- =========================
+               FOUR HANDS MASSAGE
+               ========================= -->
           <article class="service-card reveal">
+
             <div class="service-media">
+
+              <span class="service-badge">
+                Synchronized · Immersive
+              </span>
+
               <div
-                class="service-carousel"
                 data-carousel
-                data-interval="5600"
-                aria-label="Four Hands Massage image gallery"
+                data-delay="5700"
+                aria-label="Four Hands Massage gallery"
               >
+
                 <div class="service-slides">
+
                   <figure class="service-slide active">
                     <img
                       src="https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg"
-                      alt="Four Hands Massage with two practitioners working in coordination"
+                      alt="Four Hands Massage with two massage practitioners"
                       loading="lazy"
                     />
                   </figure>
@@ -2650,7 +3264,7 @@
                   <figure class="service-slide">
                     <img
                       src="https://i.pinimg.com/736x/a6/b4/26/a6b4261509788cc843fafcac56d38c51.jpg"
-                      alt="Coordinated Four Hands Massage experience"
+                      alt="Synchronized Four Hands Massage"
                       loading="lazy"
                     />
                   </figure>
@@ -2658,424 +3272,628 @@
                   <figure class="service-slide">
                     <img
                       src="https://i.pinimg.com/1200x/2b/81/ad/2b81ad4a2b574b076d5676db9ba13418.jpg"
-                      alt="Immersive Four Hands Massage session"
+                      alt="Immersive Four Hands Massage experience"
                       loading="lazy"
                     />
                   </figure>
+
                 </div>
 
-                <div class="carousel-controls">
+                <div class="carousel-bottom">
+
                   <div class="carousel-arrows">
-                    <button class="carousel-btn prev" type="button" aria-label="Previous Four Hands Massage image">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+
+                    <button
+                      class="carousel-button carousel-prev"
+                      type="button"
+                      aria-label="Previous Four Hands Massage image"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                      >
                         <path d="m15 6-6 6 6 6" />
                       </svg>
                     </button>
-                    <button class="carousel-btn next" type="button" aria-label="Next Four Hands Massage image">
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+
+                    <button
+                      class="carousel-button carousel-next"
+                      type="button"
+                      aria-label="Next Four Hands Massage image"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.7"
+                      >
                         <path d="m9 6 6 6-6 6" />
                       </svg>
                     </button>
+
                   </div>
 
-                  <div class="carousel-dots" aria-label="Four Hands Massage image selection"></div>
+                  <div class="carousel-dots"></div>
+
                 </div>
+
               </div>
+
             </div>
 
             <div class="service-content">
-              <div class="service-index">02 · Synchronized experience</div>
-              <h3>Four Hands Massage</h3>
+
+              <span class="service-number">
+                02 · Synchronized Experience
+              </span>
+
+              <h3>
+                Four Hands
+                <em>Massage</em>
+              </h3>
 
               <p class="service-description">
                 Two massage practitioners work at the same time in a
-                coordinated rhythm, creating a fuller and more immersive
-                experience. It is designed for guests who want a heightened
-                sense of relaxation and a distinctive way to step away from
-                everyday fatigue.
+                coordinated rhythm, creating a fuller, more immersive
+                experience for guests who want to sink more deeply
+                into uninterrupted relaxation.
               </p>
 
-              <div class="service-benefits" aria-label="Four Hands Massage highlights">
-                <span class="benefit-tag">Two Practitioners</span>
-                <span class="benefit-tag">Synchronized Rhythm</span>
-                <span class="benefit-tag">Immersive Relaxation</span>
-                <span class="benefit-tag">Fuller Experience</span>
+              <div class="service-tags">
+                <span class="service-tag">Two Practitioners</span>
+                <span class="service-tag">Synchronized Rhythm</span>
+                <span class="service-tag">Immersive Relaxation</span>
+                <span class="service-tag">Distinctive Experience</span>
               </div>
 
-              <div class="price-heading">Session Pricing</div>
+              <div class="price-title">
+                Session Pricing
+              </div>
 
               <div class="price-list">
+
                 <div class="price-row">
                   <span>30 minutes</span>
                   <strong>$85</strong>
                 </div>
+
                 <div class="price-row">
                   <span>45 minutes</span>
                   <strong>$120</strong>
                 </div>
+
                 <div class="price-row">
                   <span>60 minutes</span>
                   <strong>$140</strong>
                 </div>
+
               </div>
 
-              <p class="service-fineprint">
-                Gratuity is not included. For Four Hands Massage, please
-                consider gratuity separately for each of the two practitioners.
+              <p class="fineprint">
+                Gratuity is not included. For Four Hands Massage,
+                please consider gratuity separately for each of the
+                two practitioners.
               </p>
 
-              <div class="service-action">
-                <a href="#booking" class="btn btn-dark" data-book-service="Four Hands Massage">
+              <div class="service-cta">
+                <a
+                  href="#booking"
+                  class="btn btn-dark"
+                  data-service-book="Four Hands Massage"
+                >
                   Book Four Hands Massage
                 </a>
               </div>
+
             </div>
+
           </article>
+
         </div>
+
       </div>
+
     </section>
 
     <!-- =====================================================
-         ATMOSPHERE GALLERY
+         POETRY BREAK
          ===================================================== -->
-    <section class="section gallery" aria-label="Atmosphere gallery">
+    <section class="section poetry">
+
+      <div class="container poetry-inner reveal">
+
+        <div class="poetry-icon">
+          <svg
+            viewBox="0 0 48 48"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+          >
+            <path d="M5 25c6-6 12-6 18 0s12 6 20 0" />
+            <path d="M8 32c5-4 10-4 15 0s10 4 17 0" />
+            <circle cx="24" cy="13" r="5" />
+          </svg>
+        </div>
+
+        <blockquote>
+          “Rest does not need
+          to be earned.”
+        </blockquote>
+
+        <p>
+          Sometimes a quieter hour is enough to change
+          the feeling of an entire day.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         ATMOSPHERE
+         ===================================================== -->
+    <section class="section gallery" aria-label="Spa atmosphere">
+
       <div class="container">
-        <div class="section-heading center reveal">
-          <span class="eyebrow">Atmosphere</span>
-          <h2>Soft light. Quiet details.</h2>
-          <p class="section-intro">
-            A visual expression of the calm, warm and private atmosphere
-            surrounding your time at Ocean Massage Spa.
+
+        <div class="center-heading reveal">
+
+          <span class="eyebrow center">
+            Atmosphere
+          </span>
+
+          <h2>
+            A softer world
+            <span class="italic">inside.</span>
+          </h2>
+
+          <p class="section-copy">
+            Warm light, quiet details and an atmosphere designed
+            to feel removed from the noise outside.
           </p>
+
         </div>
 
         <div class="gallery-grid">
-          <figure class="gallery-item reveal">
-            <img
-              src="https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-2.jpg"
-              alt="Warm relaxation massage setting"
-              loading="lazy"
-            />
-            <figcaption class="gallery-caption">A slower pace</figcaption>
-          </figure>
 
           <figure class="gallery-item reveal">
             <img
-              src="https://i.pinimg.com/736x/ac/a6/69/aca669d5a5fe654a32f0f6b3c5138275.jpg"
-              alt="Four Hands Massage environment"
+              src="https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-2.jpg"
+              alt="Warm spa atmosphere"
               loading="lazy"
             />
-            <figcaption class="gallery-caption">Immersive calm</figcaption>
+            <figcaption class="gallery-caption">
+              Unhurried moments
+            </figcaption>
           </figure>
 
           <figure class="gallery-item reveal">
             <img
               src="https://i.pinimg.com/736x/a6/b4/26/a6b4261509788cc843fafcac56d38c51.jpg"
-              alt="Four Hands Massage session"
+              alt="Four Hands Massage atmosphere"
               loading="lazy"
             />
-            <figcaption class="gallery-caption">Coordinated rhythm</figcaption>
+            <figcaption class="gallery-caption">
+              Synchronized calm
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img
+              src="https://i.pinimg.com/736x/09/31/eb/0931ebab4602ec51313b49b72bb10c1e.jpg"
+              alt="Four Hands Massage setting"
+              loading="lazy"
+            />
+            <figcaption class="gallery-caption">
+              Immersive stillness
+            </figcaption>
           </figure>
 
           <figure class="gallery-item reveal">
             <img
               src="https://vitaveraspa.ca/wp-content/uploads/2023/07/relaxing-massage-3.jpg"
-              alt="Quiet spa treatment room prepared for a relaxing visit"
+              alt="Quiet massage space"
               loading="lazy"
             />
-            <figcaption class="gallery-caption">Space to unwind</figcaption>
+            <figcaption class="gallery-caption">
+              Space to exhale
+            </figcaption>
           </figure>
+
         </div>
+
       </div>
+
     </section>
 
     <!-- =====================================================
-         RESTFUL RITUAL
+         RESTFUL EXPERIENCE
          ===================================================== -->
-    <section class="section ritual" aria-label="A more restful visit">
+    <section class="section restful">
+
       <div class="container">
-        <div class="ritual-card reveal">
-          <span class="eyebrow light">Your Time, Unhurried</span>
-          <h2>A simple ritual for switching off.</h2>
+
+        <div class="restful-card reveal">
+
+          <span class="eyebrow light">
+            Your Time, Unhurried
+          </span>
+
+          <h2>
+            Let the day
+            become
+            <span class="italic">quieter.</span>
+          </h2>
 
           <p>
-            Give yourself enough room around your appointment to enjoy the
-            experience without rushing. A calm arrival and a quiet finish can
-            make your visit feel more complete.
+            Give yourself enough room around your appointment
+            to enjoy the experience without rushing.
           </p>
 
-          <div class="ritual-list">
-            <div><span>01</span> Arrive with a little breathing room before your appointment.</div>
-            <div><span>02</span> Share your comfort preferences before the session begins.</div>
-            <div><span>03</span> Allow a quiet moment afterward before returning to your day.</div>
+          <div class="restful-steps">
+
+            <div class="restful-step">
+              <span>1</span>
+              <div>
+                Arrive with a little time to settle in comfortably.
+              </div>
+            </div>
+
+            <div class="restful-step">
+              <span>2</span>
+              <div>
+                Share your comfort preferences before the session begins.
+              </div>
+            </div>
+
+            <div class="restful-step">
+              <span>3</span>
+              <div>
+                Allow yourself a quiet moment before returning to your day.
+              </div>
+            </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
     <!-- =====================================================
-         REVIEWS / TESTIMONIAL STYLE
-         Two infinite rows moving opposite directions.
+         REVIEWS
+         10 total comments / two opposite marquee rows
          ===================================================== -->
     <section class="section reviews" id="reviews">
+
       <div class="container">
-        <div class="section-heading center reveal">
-          <span class="eyebrow">Guest Impressions</span>
-          <h2>The feeling people remember.</h2>
-          <p class="section-intro">
-            Calm surroundings, simple booking and an atmosphere made for
-            switching off.
+
+        <div class="center-heading reveal">
+
+          <span class="eyebrow center">
+            Guest Impressions
+          </span>
+
+          <h2>
+            Remembered for
+            the way it
+            <span class="italic">feels.</span>
+          </h2>
+
+          <p class="section-copy">
+            The kind of experience people describe in simple words:
+            quiet, comfortable and easy to settle into.
           </p>
+
         </div>
+
       </div>
 
-      <div class="marquee-stack" aria-label="Guest comments">
-        <div class="marquee">
-          <article class="review-card">
+      <div class="marquee-wrap">
+
+        <!-- ROW 1 -->
+        <div class="marquee-row">
+
+          <article class="review">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “The atmosphere felt peaceful from the moment I walked in. I was
-              able to slow down and actually enjoy some quiet time.”
+              “The atmosphere felt peaceful from the moment I arrived.
+              I could finally slow down for a while.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card">
+          <article class="review">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “Very calm and comfortable. The whole visit felt easy, private
-              and never rushed.”
+              “Quiet, comfortable and never rushed. Exactly the kind
+              of break I wanted after a long week.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card">
+          <article class="review">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “I appreciated how simple everything was. A quiet setting,
-              comfortable room and a genuinely relaxing pace.”
+              “The space felt warm and private. Everything was simple,
+              calm and easy from start to finish.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card">
+          <article class="review">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “Exactly the kind of break I wanted after a long week. Clean,
-              quiet and comfortable.”
+              “I appreciated the peaceful environment most.
+              It was easy to switch off and enjoy the quiet.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card">
+          <article class="review">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “Booking was straightforward, and the space felt warm and
-              welcoming without being busy or distracting.”
+              “A comfortable place to step away from the day.
+              Clean surroundings and a very relaxed atmosphere.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <!-- duplicated for seamless loop -->
-          <article class="review-card" aria-hidden="true">
+          <!-- DUPLICATE FOR LOOP -->
+          <article class="review" aria-hidden="true">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “The atmosphere felt peaceful from the moment I walked in. I was
-              able to slow down and actually enjoy some quiet time.”
+              “The atmosphere felt peaceful from the moment I arrived.
+              I could finally slow down for a while.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card" aria-hidden="true">
+          <article class="review" aria-hidden="true">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “Very calm and comfortable. The whole visit felt easy, private
-              and never rushed.”
+              “Quiet, comfortable and never rushed. Exactly the kind
+              of break I wanted after a long week.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card" aria-hidden="true">
+          <article class="review" aria-hidden="true">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “I appreciated how simple everything was. A quiet setting,
-              comfortable room and a genuinely relaxing pace.”
+              “The space felt warm and private. Everything was simple,
+              calm and easy from start to finish.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card" aria-hidden="true">
+          <article class="review" aria-hidden="true">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “Exactly the kind of break I wanted after a long week. Clean,
-              quiet and comfortable.”
+              “I appreciated the peaceful environment most.
+              It was easy to switch off and enjoy the quiet.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card" aria-hidden="true">
+          <article class="review" aria-hidden="true">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “Booking was straightforward, and the space felt warm and
-              welcoming without being busy or distracting.”
+              “A comfortable place to step away from the day.
+              Clean surroundings and a very relaxed atmosphere.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
+
         </div>
 
-        <div class="marquee reverse">
-          <article class="review-card">
+        <!-- ROW 2 -->
+        <div class="marquee-row reverse">
+
+          <article class="review">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “The quiet environment made it easy to settle in. It felt like
-              stepping away from the noise of the day.”
+              “Booking felt straightforward and the visit itself
+              had a peaceful, welcoming feeling.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card">
+          <article class="review">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “Warm, comfortable and pleasantly private. I left feeling like
-              I had finally taken some real time for myself.”
+              “The quiet environment made such a difference.
+              I liked that nothing about the experience felt hurried.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card">
+          <article class="review">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “A really restful experience. I especially liked the calm
-              lighting and the lack of any rushed feeling.”
+              “A lovely place when you need an hour away from everything.
+              Calm lighting and a comfortable room.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card">
+          <article class="review">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “The space was tidy, peaceful and inviting. Everything about
-              the visit encouraged me to relax.”
+              “Everything felt tidy and peaceful.
+              I especially appreciated the private atmosphere.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card">
+          <article class="review">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “A comfortable place when you simply want to disconnect for a
-              while. The booking process was easy too.”
+              “The experience was simple in the best way —
+              warm, quiet and made for slowing down.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <!-- duplicated for seamless loop -->
-          <article class="review-card" aria-hidden="true">
+          <!-- DUPLICATE FOR LOOP -->
+          <article class="review" aria-hidden="true">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “The quiet environment made it easy to settle in. It felt like
-              stepping away from the noise of the day.”
+              “Booking felt straightforward and the visit itself
+              had a peaceful, welcoming feeling.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card" aria-hidden="true">
+          <article class="review" aria-hidden="true">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “Warm, comfortable and pleasantly private. I left feeling like
-              I had finally taken some real time for myself.”
+              “The quiet environment made such a difference.
+              I liked that nothing about the experience felt hurried.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card" aria-hidden="true">
+          <article class="review" aria-hidden="true">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “A really restful experience. I especially liked the calm
-              lighting and the lack of any rushed feeling.”
+              “A lovely place when you need an hour away from everything.
+              Calm lighting and a comfortable room.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card" aria-hidden="true">
+          <article class="review" aria-hidden="true">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “The space was tidy, peaceful and inviting. Everything about
-              the visit encouraged me to relax.”
+              “Everything felt tidy and peaceful.
+              I especially appreciated the private atmosphere.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
 
-          <article class="review-card" aria-hidden="true">
+          <article class="review" aria-hidden="true">
             <div class="stars">★★★★★</div>
             <blockquote>
-              “A comfortable place when you simply want to disconnect for a
-              while. The booking process was easy too.”
+              “The experience was simple in the best way —
+              warm, quiet and made for slowing down.”
             </blockquote>
-            <div class="review-meta">Guest Impression</div>
+            <span>Guest Impression</span>
           </article>
+
         </div>
+
       </div>
+
     </section>
 
     <!-- =====================================================
          BOOKING
-         Service selector contains ONLY the two real services.
+         Service choices are strictly limited to real services
          ===================================================== -->
     <section class="section booking" id="booking">
+
       <div class="container booking-grid">
+
         <div class="booking-copy reveal">
-          <span class="eyebrow light">Reservation</span>
-          <h2>Make time for yourself.</h2>
+
+          <span class="eyebrow light">
+            Reservation
+          </span>
+
+          <h2>
+            Keep a little
+            time for
+            <span class="italic">yourself.</span>
+          </h2>
+
           <p>
-            Use the form to prepare your booking details, then contact Ocean
-            Massage Spa to confirm availability.
+            Prepare your preferred service, session length and time,
+            then call Ocean Massage Spa to confirm availability.
           </p>
 
-          <div class="booking-info">
-            <div class="booking-info-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                <path d="M7 4h3l1.5 4-2 1.5a14 14 0 0 0 5 5l1.5-2 4 1.5v3c0 1.1-.9 2-2 2C10.8 19 5 13.2 5 6c0-1.1.9-2 2-2Z" />
+          <div class="booking-details">
+
+            <div class="booking-detail">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M7 4h3l1.5 4-2 1.5a14 14 0 0 0 5 5l1.5-2 4 1.5v3c0 1.1-.9 2-2 2C10.8 19 5 13.2 5 6c0-1.1.9-2 2-2Z"/>
               </svg>
-              <span>
+
+              <div>
                 <strong>Phone</strong>
-                +1 416-475-6899
-              </span>
+                <span>+1 416-475-6899</span>
+              </div>
+
             </div>
 
-            <div class="booking-info-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                <circle cx="12" cy="12" r="8" />
-                <path d="M12 8v5l3 2" />
+            <div class="booking-detail">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <circle cx="12" cy="12" r="8"/>
+                <path d="M12 8v5l3 2"/>
               </svg>
-              <span>
-                <strong>Hours</strong>
-                Daily · 9:00 AM – 10:00 PM
-              </span>
+
+              <div>
+                <strong>Opening Hours</strong>
+                <span>Every day · 9:00 AM – 10:00 PM</span>
+              </div>
+
             </div>
 
-            <div class="booking-info-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                <path d="M12 21s6-5.6 6-11a6 6 0 1 0-12 0c0 5.4 6 11 6 11Z" />
-                <circle cx="12" cy="10" r="2" />
+            <div class="booking-detail">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M12 21s6-5.6 6-11a6 6 0 1 0-12 0c0 5.4 6 11 6 11Z"/>
+                <circle cx="12" cy="10" r="2"/>
               </svg>
-              <span>
-                <strong>Location</strong>
-                607 Princess Ave, London, ON N6B 2C1, Canada
-              </span>
+
+              <div>
+                <strong>Address</strong>
+                <span>
+                  607 Princess Ave, London, ON N6B 2C1, Canada
+                </span>
+              </div>
+
             </div>
+
           </div>
+
         </div>
 
-        <div class="booking-form-wrap reveal">
-          <h3 class="booking-form-title">Request Details</h3>
+        <div class="booking-form-card reveal">
+
+          <h3>
+            Request Details
+          </h3>
 
           <form id="bookingForm">
+
             <div class="form-grid">
+
               <div class="field">
-                <label for="guestName">Name</label>
+                <label for="name">Name</label>
+
                 <input
-                  id="guestName"
+                  id="name"
                   name="name"
                   type="text"
                   autocomplete="name"
@@ -3085,9 +3903,10 @@
               </div>
 
               <div class="field">
-                <label for="guestPhone">Phone</label>
+                <label for="phone">Phone</label>
+
                 <input
-                  id="guestPhone"
+                  id="phone"
                   name="phone"
                   type="tel"
                   autocomplete="tel"
@@ -3097,30 +3916,64 @@
               </div>
 
               <div class="field">
-                <label for="serviceSelect">Service</label>
-                <select id="serviceSelect" name="service" required>
-                  <option value="">Select a service</option>
-                  <option value="Relaxation Massage">Relaxation Massage</option>
-                  <option value="Four Hands Massage">Four Hands Massage</option>
+                <label for="service">Service</label>
+
+                <select
+                  id="service"
+                  name="service"
+                  required
+                >
+                  <option value="">
+                    Select a service
+                  </option>
+
+                  <option value="Relaxation Massage">
+                    Relaxation Massage
+                  </option>
+
+                  <option value="Four Hands Massage">
+                    Four Hands Massage
+                  </option>
                 </select>
               </div>
 
               <div class="field">
-                <label for="durationSelect">Duration</label>
-                <select id="durationSelect" name="duration" required disabled>
-                  <option value="">Choose service first</option>
+                <label for="duration">
+                  Duration
+                </label>
+
+                <select
+                  id="duration"
+                  name="duration"
+                  disabled
+                  required
+                >
+                  <option value="">
+                    Choose service first
+                  </option>
                 </select>
               </div>
 
               <div class="field">
-                <label for="preferredDate">Preferred Date</label>
-                <input id="preferredDate" name="date" type="date" required />
-              </div>
+                <label for="date">
+                  Preferred Date
+                </label>
 
-              <div class="field">
-                <label for="preferredTime">Preferred Time</label>
                 <input
-                  id="preferredTime"
+                  id="date"
+                  name="date"
+                  type="date"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="time">
+                  Preferred Time
+                </label>
+
+                <input
+                  id="time"
                   name="time"
                   type="time"
                   min="09:00"
@@ -3130,203 +3983,340 @@
               </div>
 
               <div class="field full">
-                <label for="bookingNotes">Notes</label>
+
+                <label for="notes">
+                  Notes
+                </label>
+
                 <textarea
-                  id="bookingNotes"
+                  id="notes"
                   name="notes"
                   placeholder="Share any comfort preferences or scheduling notes."
                 ></textarea>
+
               </div>
+
             </div>
 
             <div class="form-footer">
-              <p class="form-disclaimer">
-                This form is a front-end booking request interface and does
-                not send information to a server. Please call the spa to
-                confirm your appointment.
+
+              <p class="form-note">
+                This form is a front-end request interface.
+                Please call the spa to confirm availability.
               </p>
 
-              <button type="submit" class="btn btn-primary">
+              <button
+                type="submit"
+                class="btn btn-gold"
+              >
                 Prepare Request
               </button>
+
             </div>
 
-            <div class="form-message" id="formMessage" role="status" aria-live="polite">
-              Your details are prepared. Please call
-              <a href="tel:+14164756899"><strong>+1 416-475-6899</strong></a>
+            <div
+              class="form-success"
+              id="formSuccess"
+              role="status"
+              aria-live="polite"
+            >
+              Your request details are prepared.
+              Please call
+              <a href="tel:+14164756899">
+                <strong>+1 416-475-6899</strong>
+              </a>
               to confirm availability.
             </div>
+
           </form>
+
         </div>
+
       </div>
+
     </section>
 
     <!-- =====================================================
          FAQ
          ===================================================== -->
     <section class="section faq" id="faq">
-      <div class="container faq-grid">
-        <div class="reveal">
-          <span class="eyebrow">Before Your Visit</span>
-          <h2>A few helpful details.</h2>
 
-          <p class="faq-side-note">
-            Have a question that is not covered here? Calling ahead is the
-            simplest way to confirm current policies and visit details.
+      <div class="container faq-grid">
+
+        <div class="faq-intro reveal">
+
+          <span class="eyebrow">
+            Before Your Visit
+          </span>
+
+          <h2>
+            A few gentle
+            <span class="italic">details.</span>
+          </h2>
+
+          <p>
+            For anything not covered here, calling the spa is the
+            easiest way to confirm current visit information.
           </p>
 
-          <a class="faq-side-contact" href="tel:+14164756899">
+          <a
+            class="faq-phone"
+            href="tel:+14164756899"
+          >
             Call +1 416-475-6899 →
           </a>
+
         </div>
 
         <div class="faq-list reveal">
+
           <article class="faq-item">
+
             <button
-              class="faq-question"
+              class="faq-button"
               type="button"
               aria-expanded="false"
-              aria-controls="faq-answer-1"
+              aria-controls="faq1"
             >
-              <span>How early should I arrive?</span>
-              <span class="faq-plus" aria-hidden="true"></span>
+              <span>
+                How early should I arrive?
+              </span>
+
+              <span
+                class="faq-plus"
+                aria-hidden="true"
+              ></span>
             </button>
-            <div class="faq-answer" id="faq-answer-1">
+
+            <div
+              class="faq-answer"
+              id="faq1"
+            >
               <div>
                 <p>
-                  Arriving around 5–10 minutes early is a comfortable buffer
-                  for settling in without feeling rushed. If you have any
-                  timing questions for your specific appointment, call ahead.
+                  Arriving around 5–10 minutes early is a comfortable
+                  buffer for settling in without feeling rushed.
+                  Call ahead if you have specific timing questions.
                 </p>
               </div>
             </div>
+
           </article>
 
           <article class="faq-item">
+
             <button
-              class="faq-question"
+              class="faq-button"
               type="button"
               aria-expanded="false"
-              aria-controls="faq-answer-2"
+              aria-controls="faq2"
             >
-              <span>Can I get a massage if I have an injury?</span>
-              <span class="faq-plus" aria-hidden="true"></span>
+              <span>
+                Can I get a massage if I have an injury?
+              </span>
+
+              <span
+                class="faq-plus"
+                aria-hidden="true"
+              ></span>
             </button>
-            <div class="faq-answer" id="faq-answer-2">
+
+            <div
+              class="faq-answer"
+              id="faq2"
+            >
               <div>
                 <p>
-                  Massage may not be appropriate for every injury or medical
-                  situation. If you have an injury, recent procedure, acute
-                  pain or another health concern, consider checking with an
-                  appropriate healthcare professional first and let the spa
-                  know before your appointment.
+                  Massage may not be appropriate for every injury
+                  or medical situation. If you have an acute injury,
+                  recent procedure, significant pain or another health
+                  concern, consider checking with an appropriate healthcare
+                  professional first and let the spa know before your visit.
                 </p>
               </div>
             </div>
+
           </article>
 
           <article class="faq-item">
+
             <button
-              class="faq-question"
+              class="faq-button"
               type="button"
               aria-expanded="false"
-              aria-controls="faq-answer-3"
+              aria-controls="faq3"
             >
-              <span>What is your cancellation policy?</span>
-              <span class="faq-plus" aria-hidden="true"></span>
+              <span>
+                What is your cancellation policy?
+              </span>
+
+              <span
+                class="faq-plus"
+                aria-hidden="true"
+              ></span>
             </button>
-            <div class="faq-answer" id="faq-answer-3">
+
+            <div
+              class="faq-answer"
+              id="faq3"
+            >
               <div>
                 <p>
-                  A cancellation policy was not included in the information
-                  provided for this website. Please call
-                  +1 416-475-6899 when booking to confirm the current policy.
+                  A cancellation policy was not included in the
+                  information provided for this website.
+                  Please call +1 416-475-6899 when booking to confirm
+                  the current policy.
                 </p>
               </div>
             </div>
+
           </article>
 
           <article class="faq-item">
+
             <button
-              class="faq-question"
+              class="faq-button"
               type="button"
               aria-expanded="false"
-              aria-controls="faq-answer-4"
+              aria-controls="faq4"
             >
-              <span>Is there parking available?</span>
-              <span class="faq-plus" aria-hidden="true"></span>
+              <span>
+                Is there parking available?
+              </span>
+
+              <span
+                class="faq-plus"
+                aria-hidden="true"
+              ></span>
             </button>
-            <div class="faq-answer" id="faq-answer-4">
+
+            <div
+              class="faq-answer"
+              id="faq4"
+            >
               <div>
                 <p>
                   Parking information was not provided for this website.
-                  Please call the spa before your visit for current parking
-                  and arrival guidance near 607 Princess Ave.
+                  Please call the spa before your visit for current
+                  parking and arrival guidance near 607 Princess Ave.
                 </p>
               </div>
             </div>
+
           </article>
+
         </div>
+
       </div>
+
     </section>
 
     <!-- =====================================================
-         CONTACT & LOCATION
+         CONTACT
          ===================================================== -->
     <section class="section contact" id="contact">
+
       <div class="container">
-        <div class="contact-grid reveal">
+
+        <div class="contact-panel reveal">
+
           <div class="contact-content">
-            <span class="eyebrow">Contact &amp; Location</span>
-            <h2>Find your way to calm.</h2>
+
+            <span class="eyebrow">
+              Contact &amp; Location
+            </span>
+
+            <h2>
+              Find your way
+              <span class="italic">to calm.</span>
+            </h2>
 
             <p>
-              Ocean Massage Spa is located on Princess Avenue in London,
-              Ontario and is open every day from morning through evening.
+              Ocean Massage Spa is located on Princess Avenue
+              in London, Ontario and is open seven days a week.
             </p>
 
-            <div class="contact-cards">
-              <div class="contact-card">
-                <span class="contact-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                    <path d="M12 21s6-5.6 6-11a6 6 0 1 0-12 0c0 5.4 6 11 6 11Z" />
-                    <circle cx="12" cy="10" r="2" />
+            <div class="contact-items">
+
+              <div class="contact-item">
+
+                <span class="contact-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M12 21s6-5.6 6-11a6 6 0 1 0-12 0c0 5.4 6 11 6 11Z"/>
+                    <circle cx="12" cy="10" r="2"/>
                   </svg>
                 </span>
+
                 <div>
                   <strong>Address</strong>
-                  <span>607 Princess Ave, London, ON N6B 2C1, Canada</span>
+                  <span>
+                    607 Princess Ave, London, ON N6B 2C1, Canada
+                  </span>
                 </div>
+
               </div>
 
-              <div class="contact-card">
-                <span class="contact-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                    <path d="M7 4h3l1.5 4-2 1.5a14 14 0 0 0 5 5l1.5-2 4 1.5v3c0 1.1-.9 2-2 2C10.8 19 5 13.2 5 6c0-1.1.9-2 2-2Z" />
+              <div class="contact-item">
+
+                <span class="contact-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <path d="M7 4h3l1.5 4-2 1.5a14 14 0 0 0 5 5l1.5-2 4 1.5v3c0 1.1-.9 2-2 2C10.8 19 5 13.2 5 6c0-1.1.9-2 2-2Z"/>
                   </svg>
                 </span>
+
                 <div>
                   <strong>Phone</strong>
-                  <a href="tel:+14164756899">+1 416-475-6899</a>
+                  <a href="tel:+14164756899">
+                    +1 416-475-6899
+                  </a>
                 </div>
+
               </div>
 
-              <div class="contact-card">
-                <span class="contact-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-                    <circle cx="12" cy="12" r="8" />
-                    <path d="M12 8v5l3 2" />
+              <div class="contact-item">
+
+                <span class="contact-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  >
+                    <circle cx="12" cy="12" r="8"/>
+                    <path d="M12 8v5l3 2"/>
                   </svg>
                 </span>
+
                 <div>
                   <strong>Hours</strong>
-                  <span>Every day · 9:00 AM – 10:00 PM</span>
+                  <span>
+                    Every day · 9:00 AM – 10:00 PM
+                  </span>
                 </div>
+
               </div>
+
             </div>
 
             <div class="contact-actions">
-              <a href="tel:+14164756899" class="btn btn-dark">Call Now</a>
+
+              <a
+                href="tel:+14164756899"
+                class="btn btn-dark"
+              >
+                Call Now
+              </a>
+
               <a
                 href="https://www.google.com/maps/place/OCEAN+MASSAGE+SPA/@42.9924612,-81.2335393,17z"
                 target="_blank"
@@ -3335,367 +4325,888 @@
               >
                 Get Directions
               </a>
+
             </div>
+
           </div>
 
-          <div class="map-wrap">
+          <div class="map">
+
             <iframe
-              title="Ocean Massage Spa location at 607 Princess Ave, London, Ontario"
+              title="Ocean Massage Spa location"
               src="https://www.google.com/maps?q=607%20Princess%20Ave%2C%20London%2C%20ON%20N6B%202C1%2C%20Canada&output=embed"
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
               allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
   <!-- =======================================================
        FOOTER
        ======================================================= -->
   <footer class="footer">
+
     <div class="container">
+
       <div class="footer-top">
+
         <div class="footer-brand">
-          <div class="footer-logo">Ocean Massage Spa</div>
+
+          <h3>
+            Ocean Massage Spa
+          </h3>
+
           <p>
-            A quiet massage spa in London, Ontario, created for unhurried
-            relaxation, privacy and time away from the pace of everyday life.
+            A quiet massage spa in London, Ontario,
+            created around privacy, warmth and unhurried relaxation.
           </p>
+
         </div>
 
         <div>
-          <h3>Explore</h3>
+
+          <h4 class="footer-title">
+            Explore
+          </h4>
+
           <div class="footer-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#experience">Experience</a>
+            <a href="#reviews">Reviews</a>
             <a href="#faq">FAQ</a>
           </div>
+
         </div>
 
         <div>
-          <h3>Visit</h3>
+
+          <h4 class="footer-title">
+            Visit
+          </h4>
+
           <div class="footer-links">
             <span>607 Princess Ave</span>
             <span>London, ON N6B 2C1</span>
-            <a href="tel:+14164756899">+1 416-475-6899</a>
-            <span>Daily · 9:00 AM – 10:00 PM</span>
+
+            <a href="tel:+14164756899">
+              +1 416-475-6899
+            </a>
+
+            <span>
+              Daily · 9:00 AM – 10:00 PM
+            </span>
           </div>
+
         </div>
+
       </div>
 
       <div class="footer-bottom">
-        <span>© <span id="currentYear"></span> Ocean Massage Spa. All rights reserved.</span>
-        <span>Quiet moments · Thoughtful comfort · London, Ontario</span>
+
+        <span>
+          © <span id="year"></span>
+          Ocean Massage Spa.
+          All rights reserved.
+        </span>
+
+        <span>
+          Quiet moments · Thoughtful comfort · London, Ontario
+        </span>
+
       </div>
+
     </div>
+
   </footer>
 
   <script>
     /* =========================================================
-       HEADER SCROLL EFFECT
+       HEADER
        ========================================================= */
-    const siteHeader = document.getElementById("siteHeader");
 
-    function updateHeader() {
-      siteHeader.classList.toggle("scrolled", window.scrollY > 30);
-    }
+    const header = document.getElementById("header");
 
-    updateHeader();
-    window.addEventListener("scroll", updateHeader, { passive: true });
-
-    /* =========================================================
-       MOBILE NAVIGATION
-       ========================================================= */
-    const menuToggle = document.getElementById("menuToggle");
-    const mobileNav = document.getElementById("mobileNav");
-
-    function closeMobileMenu() {
-      mobileNav.classList.remove("open");
-      document.body.classList.remove("menu-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Open navigation menu");
-    }
-
-    menuToggle.addEventListener("click", () => {
-      const opening = !mobileNav.classList.contains("open");
-
-      mobileNav.classList.toggle("open", opening);
-      document.body.classList.toggle("menu-open", opening);
-      menuToggle.setAttribute("aria-expanded", String(opening));
-      menuToggle.setAttribute(
-        "aria-label",
-        opening ? "Close navigation menu" : "Open navigation menu"
+    const handleHeader = () => {
+      header.classList.toggle(
+        "scrolled",
+        window.scrollY > 28
       );
-    });
+    };
 
-    mobileNav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMobileMenu);
-    });
+    handleHeader();
 
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 1020) closeMobileMenu();
-    });
+    window.addEventListener(
+      "scroll",
+      handleHeader,
+      { passive: true }
+    );
+
 
     /* =========================================================
-       HERO BACKGROUND CAROUSEL
-       Randomized initial image; native JS only.
+       MOBILE MENU
        ========================================================= */
-    const heroSlides = [...document.querySelectorAll(".hero-slide")];
-    const heroDots = [...document.querySelectorAll(".hero-dot")];
 
-    let heroIndex = Math.floor(Math.random() * heroSlides.length);
-    let heroTimer = null;
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const mobileNav =
+      document.getElementById("mobileNav");
+
+    function closeMenu() {
+      mobileNav.classList.remove("open");
+
+      document.body.classList.remove(
+        "menu-open"
+      );
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+      menuButton.setAttribute(
+        "aria-label",
+        "Open menu"
+      );
+    }
+
+    menuButton.addEventListener(
+      "click",
+      () => {
+        const opening =
+          !mobileNav.classList.contains(
+            "open"
+          );
+
+        mobileNav.classList.toggle(
+          "open",
+          opening
+        );
+
+        document.body.classList.toggle(
+          "menu-open",
+          opening
+        );
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          String(opening)
+        );
+
+        menuButton.setAttribute(
+          "aria-label",
+          opening
+            ? "Close menu"
+            : "Open menu"
+        );
+      }
+    );
+
+    mobileNav
+      .querySelectorAll("a")
+      .forEach((link) => {
+        link.addEventListener(
+          "click",
+          closeMenu
+        );
+      });
+
+    window.addEventListener(
+      "resize",
+      () => {
+        if (window.innerWidth > 1020) {
+          closeMenu();
+        }
+      }
+    );
+
+
+    /* =========================================================
+       HERO CAROUSEL
+       ========================================================= */
+
+    const heroSlides =
+      [...document.querySelectorAll(
+        ".hero-slide"
+      )];
+
+    const heroDots =
+      [...document.querySelectorAll(
+        ".hero-dot"
+      )];
+
+    let heroIndex =
+      Math.floor(
+        Math.random() *
+        heroSlides.length
+      );
+
+    let heroInterval;
 
     function showHero(index) {
-      heroIndex = (index + heroSlides.length) % heroSlides.length;
 
-      heroSlides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === heroIndex);
-      });
+      heroIndex =
+        (
+          index +
+          heroSlides.length
+        ) %
+        heroSlides.length;
 
-      heroDots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === heroIndex);
-      });
+      heroSlides.forEach(
+        (slide, i) => {
+          slide.classList.toggle(
+            "active",
+            i === heroIndex
+          );
+        }
+      );
+
+      heroDots.forEach(
+        (dot, i) => {
+          dot.classList.toggle(
+            "active",
+            i === heroIndex
+          );
+        }
+      );
     }
 
-    function startHeroAutoplay() {
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    function startHero() {
 
-      clearInterval(heroTimer);
-      heroTimer = setInterval(() => {
-        showHero(heroIndex + 1);
-      }, 6500);
+      if (
+        window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches
+      ) {
+        return;
+      }
+
+      clearInterval(
+        heroInterval
+      );
+
+      heroInterval =
+        setInterval(
+          () => {
+            showHero(
+              heroIndex + 1
+            );
+          },
+          6800
+        );
     }
 
-    showHero(heroIndex);
-    startHeroAutoplay();
+    showHero(
+      heroIndex
+    );
 
-    heroDots.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        showHero(Number(dot.dataset.heroDot));
-        startHeroAutoplay();
-      });
-    });
+    startHero();
+
+    heroDots.forEach(
+      (dot) => {
+
+        dot.addEventListener(
+          "click",
+          () => {
+
+            showHero(
+              Number(
+                dot.dataset.hero
+              )
+            );
+
+            startHero();
+          }
+        );
+
+      }
+    );
+
 
     /* =========================================================
        SERVICE CAROUSELS
        ========================================================= */
-    document.querySelectorAll("[data-carousel]").forEach((carousel) => {
-      const slides = [...carousel.querySelectorAll(".service-slide")];
-      const dotsWrap = carousel.querySelector(".carousel-dots");
-      const prev = carousel.querySelector(".prev");
-      const next = carousel.querySelector(".next");
 
-      let index = 0;
-      let timer = null;
-      const interval = Number(carousel.dataset.interval || 5200);
+    document
+      .querySelectorAll(
+        "[data-carousel]"
+      )
+      .forEach(
+        (carousel) => {
 
-      slides.forEach((_, i) => {
-        const dot = document.createElement("button");
-        dot.type = "button";
-        dot.className = `carousel-dot${i === 0 ? " active" : ""}`;
-        dot.setAttribute("aria-label", `Show image ${i + 1}`);
-        dot.addEventListener("click", () => {
-          show(i);
-          restart();
-        });
-        dotsWrap.appendChild(dot);
-      });
+          const slides =
+            [...carousel.querySelectorAll(
+              ".service-slide"
+            )];
 
-      const dots = [...dotsWrap.querySelectorAll(".carousel-dot")];
+          const prev =
+            carousel.querySelector(
+              ".carousel-prev"
+            );
 
-      function show(newIndex) {
-        index = (newIndex + slides.length) % slides.length;
+          const next =
+            carousel.querySelector(
+              ".carousel-next"
+            );
 
-        slides.forEach((slide, i) => {
-          slide.classList.toggle("active", i === index);
-        });
+          const dotsContainer =
+            carousel.querySelector(
+              ".carousel-dots"
+            );
 
-        dots.forEach((dot, i) => {
-          dot.classList.toggle("active", i === index);
-        });
-      }
+          const delay =
+            Number(
+              carousel.dataset.delay
+            ) || 5200;
 
-      function start() {
-        if (
-          slides.length < 2 ||
-          window.matchMedia("(prefers-reduced-motion: reduce)").matches
-        ) {
-          return;
+          let index = 0;
+          let interval;
+
+          slides.forEach(
+            (_, dotIndex) => {
+
+              const dot =
+                document.createElement(
+                  "button"
+                );
+
+              dot.type = "button";
+
+              dot.className =
+                "carousel-dot";
+
+              dot.setAttribute(
+                "aria-label",
+                `Show image ${dotIndex + 1}`
+              );
+
+              if (dotIndex === 0) {
+                dot.classList.add(
+                  "active"
+                );
+              }
+
+              dot.addEventListener(
+                "click",
+                () => {
+
+                  show(
+                    dotIndex
+                  );
+
+                  restart();
+                }
+              );
+
+              dotsContainer.appendChild(
+                dot
+              );
+
+            }
+          );
+
+          const dots =
+            [...dotsContainer.querySelectorAll(
+              ".carousel-dot"
+            )];
+
+          function show(newIndex) {
+
+            index =
+              (
+                newIndex +
+                slides.length
+              ) %
+              slides.length;
+
+            slides.forEach(
+              (slide, i) => {
+
+                slide.classList.toggle(
+                  "active",
+                  i === index
+                );
+
+              }
+            );
+
+            dots.forEach(
+              (dot, i) => {
+
+                dot.classList.toggle(
+                  "active",
+                  i === index
+                );
+
+              }
+            );
+
+          }
+
+          function start() {
+
+            if (
+              slides.length < 2 ||
+              window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+              ).matches
+            ) {
+              return;
+            }
+
+            interval =
+              setInterval(
+                () => {
+                  show(
+                    index + 1
+                  );
+                },
+                delay
+              );
+
+          }
+
+          function stop() {
+            clearInterval(
+              interval
+            );
+          }
+
+          function restart() {
+            stop();
+            start();
+          }
+
+          prev.addEventListener(
+            "click",
+            () => {
+
+              show(
+                index - 1
+              );
+
+              restart();
+            }
+          );
+
+          next.addEventListener(
+            "click",
+            () => {
+
+              show(
+                index + 1
+              );
+
+              restart();
+            }
+          );
+
+          carousel.addEventListener(
+            "mouseenter",
+            stop
+          );
+
+          carousel.addEventListener(
+            "mouseleave",
+            start
+          );
+
+          carousel.addEventListener(
+            "focusin",
+            stop
+          );
+
+          carousel.addEventListener(
+            "focusout",
+            start
+          );
+
+          show(0);
+          start();
+
         }
+      );
 
-        timer = setInterval(() => show(index + 1), interval);
-      }
-
-      function stop() {
-        clearInterval(timer);
-      }
-
-      function restart() {
-        stop();
-        start();
-      }
-
-      prev.addEventListener("click", () => {
-        show(index - 1);
-        restart();
-      });
-
-      next.addEventListener("click", () => {
-        show(index + 1);
-        restart();
-      });
-
-      carousel.addEventListener("mouseenter", stop);
-      carousel.addEventListener("mouseleave", start);
-      carousel.addEventListener("focusin", stop);
-      carousel.addEventListener("focusout", start);
-
-      show(0);
-      start();
-    });
 
     /* =========================================================
-       SERVICE -> BOOKING PRESELECTION
+       SERVICE BOOKING SELECTION
        ========================================================= */
-    const serviceSelect = document.getElementById("serviceSelect");
-    const durationSelect = document.getElementById("durationSelect");
+
+    const serviceSelect =
+      document.getElementById(
+        "service"
+      );
+
+    const durationSelect =
+      document.getElementById(
+        "duration"
+      );
 
     const serviceDurations = {
+
       "Relaxation Massage": [
-        { label: "30 minutes — $50", value: "30 minutes" },
-        { label: "45 minutes — $70", value: "45 minutes" },
-        { label: "60 minutes — $80", value: "60 minutes" },
-        { label: "90 minutes — $130", value: "90 minutes" }
+        {
+          label:
+            "30 minutes — $50",
+          value:
+            "30 minutes"
+        },
+        {
+          label:
+            "45 minutes — $70",
+          value:
+            "45 minutes"
+        },
+        {
+          label:
+            "60 minutes — $80",
+          value:
+            "60 minutes"
+        },
+        {
+          label:
+            "90 minutes — $130",
+          value:
+            "90 minutes"
+        }
       ],
+
       "Four Hands Massage": [
-        { label: "30 minutes — $85", value: "30 minutes" },
-        { label: "45 minutes — $120", value: "45 minutes" },
-        { label: "60 minutes — $140", value: "60 minutes" }
+        {
+          label:
+            "30 minutes — $85",
+          value:
+            "30 minutes"
+        },
+        {
+          label:
+            "45 minutes — $120",
+          value:
+            "45 minutes"
+        },
+        {
+          label:
+            "60 minutes — $140",
+          value:
+            "60 minutes"
+        }
       ]
+
     };
 
     function updateDurations() {
-      const selected = serviceSelect.value;
+
+      const selected =
+        serviceSelect.value;
+
       durationSelect.innerHTML = "";
 
-      if (!selected || !serviceDurations[selected]) {
-        const option = document.createElement("option");
+      if (
+        !selected ||
+        !serviceDurations[selected]
+      ) {
+
+        const option =
+          document.createElement(
+            "option"
+          );
+
         option.value = "";
-        option.textContent = "Choose service first";
-        durationSelect.appendChild(option);
-        durationSelect.disabled = true;
+
+        option.textContent =
+          "Choose service first";
+
+        durationSelect.appendChild(
+          option
+        );
+
+        durationSelect.disabled =
+          true;
+
         return;
       }
 
-      durationSelect.disabled = false;
+      durationSelect.disabled =
+        false;
 
-      const placeholder = document.createElement("option");
+      const placeholder =
+        document.createElement(
+          "option"
+        );
+
       placeholder.value = "";
-      placeholder.textContent = "Select a duration";
-      durationSelect.appendChild(placeholder);
 
-      serviceDurations[selected].forEach((duration) => {
-        const option = document.createElement("option");
-        option.value = duration.value;
-        option.textContent = duration.label;
-        durationSelect.appendChild(option);
-      });
+      placeholder.textContent =
+        "Select a duration";
+
+      durationSelect.appendChild(
+        placeholder
+      );
+
+      serviceDurations[
+        selected
+      ].forEach(
+        (item) => {
+
+          const option =
+            document.createElement(
+              "option"
+            );
+
+          option.value =
+            item.value;
+
+          option.textContent =
+            item.label;
+
+          durationSelect.appendChild(
+            option
+          );
+
+        }
+      );
+
     }
 
-    serviceSelect.addEventListener("change", updateDurations);
+    serviceSelect.addEventListener(
+      "change",
+      updateDurations
+    );
 
-    document.querySelectorAll("[data-book-service]").forEach((button) => {
-      button.addEventListener("click", () => {
-        serviceSelect.value = button.dataset.bookService;
-        updateDurations();
-      });
-    });
+    document
+      .querySelectorAll(
+        "[data-service-book]"
+      )
+      .forEach(
+        (button) => {
+
+          button.addEventListener(
+            "click",
+            () => {
+
+              serviceSelect.value =
+                button.dataset.serviceBook;
+
+              updateDurations();
+
+            }
+          );
+
+        }
+      );
+
 
     /* =========================================================
-       BOOKING FORM DEMO
+       BOOKING FORM
        ========================================================= */
-    const bookingForm = document.getElementById("bookingForm");
-    const formMessage = document.getElementById("formMessage");
-    const preferredDate = document.getElementById("preferredDate");
 
-    const today = new Date();
+    const bookingForm =
+      document.getElementById(
+        "bookingForm"
+      );
+
+    const formSuccess =
+      document.getElementById(
+        "formSuccess"
+      );
+
+    const dateField =
+      document.getElementById(
+        "date"
+      );
+
+    const now =
+      new Date();
+
     const localDate =
-      today.getFullYear() +
+      now.getFullYear() +
       "-" +
-      String(today.getMonth() + 1).padStart(2, "0") +
+      String(
+        now.getMonth() + 1
+      ).padStart(2, "0") +
       "-" +
-      String(today.getDate()).padStart(2, "0");
+      String(
+        now.getDate()
+      ).padStart(2, "0");
 
-    preferredDate.min = localDate;
+    dateField.min =
+      localDate;
 
-    bookingForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      formMessage.classList.add("show");
-      formMessage.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest"
-      });
-    });
+    bookingForm.addEventListener(
+      "submit",
+      (event) => {
 
-    /* =========================================================
-       FAQ ACCORDION
-       ========================================================= */
-    document.querySelectorAll(".faq-question").forEach((button) => {
-      button.addEventListener("click", () => {
-        const item = button.closest(".faq-item");
-        const currentlyOpen = item.classList.contains("open");
+        event.preventDefault();
 
-        document.querySelectorAll(".faq-item").forEach((faqItem) => {
-          faqItem.classList.remove("open");
-          faqItem
-            .querySelector(".faq-question")
-            .setAttribute("aria-expanded", "false");
+        formSuccess.classList.add(
+          "show"
+        );
+
+        formSuccess.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest"
         });
 
-        if (!currentlyOpen) {
-          item.classList.add("open");
-          button.setAttribute("aria-expanded", "true");
+      }
+    );
+
+
+    /* =========================================================
+       FAQ
+       ========================================================= */
+
+    document
+      .querySelectorAll(
+        ".faq-button"
+      )
+      .forEach(
+        (button) => {
+
+          button.addEventListener(
+            "click",
+            () => {
+
+              const item =
+                button.closest(
+                  ".faq-item"
+                );
+
+              const wasOpen =
+                item.classList.contains(
+                  "open"
+                );
+
+              document
+                .querySelectorAll(
+                  ".faq-item"
+                )
+                .forEach(
+                  (otherItem) => {
+
+                    otherItem.classList.remove(
+                      "open"
+                    );
+
+                    otherItem
+                      .querySelector(
+                        ".faq-button"
+                      )
+                      .setAttribute(
+                        "aria-expanded",
+                        "false"
+                      );
+
+                  }
+                );
+
+              if (!wasOpen) {
+
+                item.classList.add(
+                  "open"
+                );
+
+                button.setAttribute(
+                  "aria-expanded",
+                  "true"
+                );
+
+              }
+
+            }
+          );
+
         }
-      });
-    });
+      );
+
 
     /* =========================================================
        SCROLL REVEAL
        ========================================================= */
-    const revealElements = document.querySelectorAll(".reveal");
 
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        {
-          threshold: 0.1,
-          rootMargin: "0px 0px -35px 0px"
+    const revealItems =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+    if (
+      "IntersectionObserver"
+      in window
+    ) {
+
+      const observer =
+        new IntersectionObserver(
+          (entries) => {
+
+            entries.forEach(
+              (entry) => {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry.target.classList.add(
+                    "show"
+                  );
+
+                  observer.unobserve(
+                    entry.target
+                  );
+
+                }
+
+              }
+            );
+
+          },
+          {
+            threshold: 0.1,
+            rootMargin:
+              "0px 0px -35px 0px"
+          }
+        );
+
+      revealItems.forEach(
+        (item) => {
+          observer.observe(
+            item
+          );
         }
       );
 
-      revealElements.forEach((element) => observer.observe(element));
     } else {
-      revealElements.forEach((element) => element.classList.add("visible"));
+
+      revealItems.forEach(
+        (item) => {
+          item.classList.add(
+            "show"
+          );
+        }
+      );
+
     }
+
 
     /* =========================================================
        FOOTER YEAR
        ========================================================= */
-    document.getElementById("currentYear").textContent =
+
+    document.getElementById(
+      "year"
+    ).textContent =
       new Date().getFullYear();
+
   </script>
+
 </body>
 </html>
